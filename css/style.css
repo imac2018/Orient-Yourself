@@ -1,0 +1,83 @@
+﻿/* Bouts de code rapides pour les media queries :
+ *
+ * @media screen and (max-width:780px) {...}
+ * @media screen and (max-height:580px) {...}
+ */
+
+/* A défaut d'un meilleur nom... x) */
+.poster {
+    overflow:hidden;
+}
+.poster, .poster_fond {
+    width:100%; height:100%;
+}
+.poster_logo_conteneur {
+    width:50%; heigth:50%;
+}
+.poster_fond, .poster_logo_conteneur {
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.poster_logo {
+    transition: transform 0.3s ease-out 0s;
+}
+.poster_logo_conteneur:hover .poster_logo {
+    transform: translateX(-20px);
+}
+.poster_logo_derriere { 
+    position:absolute; top:0; left:0;
+    width:100%; height:100%;
+    opacity: 0;
+    transition: transform 0.3s ease-out 0s, 
+                opacity   0.3s ease-out 0s; 
+}
+.poster_logo_conteneur:hover .poster_logo_derriere {
+    opacity: 1;
+    transform: translateX(20px);
+}
+
+.poster_article {
+    height:100%;
+    width:50%;
+    background:rgba(0,0,0,0.9);
+    color:white;
+    transform: translate(200%,-100%);
+    transition: transform 0.3s ease-out 0s;
+}
+
+.poster > a:active ~ .poster_article {
+    transform: translate(100%,-100%);
+}
+
+.gallerie {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items:center;
+    align-content:center;
+    flex-wrap: wrap;
+}
+
+.vignette {
+    flex: auto;
+    width:100px;
+    margin:10px;
+    background:#dddddd;
+}
+
+
+/*
+@keyframes poster_logo_anim {
+    from {background-color: rgba(0,0,0,0);}
+    to   {background-color: yellow;}
+}
+
+.poster_logo:hover,
+.poster_logo:focus,
+.poster_logo:active
+{
+    animation: poster_logo_anim 1s ease-out 0s 1 normal both running;
+}
+*/
