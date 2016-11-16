@@ -24,5 +24,9 @@ function pastilles_chargees() {
     pastilles_capturer();
     window.requestAnimationFrame(pastilles_frame);
 }
-// Commenté, parce que ça ne marchera pas tout de suite.
-//$(function(){pastilles_chargees();}) //quand le DOM est pret...
+
+// Quand le DOM est pret...
+$(function(){
+    $("#page_chargement").delay(800).fadeOut("slow");
+    //pastilles_chargees();
+});

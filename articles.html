@@ -20,14 +20,41 @@
 </head>
 <body>
 
-    <nav class="nav_pastilles">
+    <!-- Cet élément disparait après un certain temps. -->
+    <div id="page_chargement">
+        <img alt="Logo" src="img/Planche_logo.png" style="height:100%;">
+    </div>
+
+    <nav class="nav_articles">
         <p><a href="javascript:glisser('poster1');">
-            <img src="img/pastille.png" alt="p" class="pastille">
+            <img src="img/pastille.png" alt="p" class="nav_article_puce">
         </a></p>
         <p><a href="javascript:glisser('poster2');">
-            <img src="img/pastille.png" alt="p" class="pastille">
+            <img src="img/pastille.png" alt="p" class="nav_article_puce">
         </a></p>
     </nav>
+
+    <nav class="nav_categories">
+        <a href="javascript:glisser('poster1');">
+            <img class="nav_categorie_logo" alt="logo" src="img/logo_blanc.png">
+        </a>
+        <div class="nav_categorie"><a href="javascript:glisser('poster1');">PANORAMIQUE</a></div>
+        <div class="nav_categorie"><a href="javascript:glisser('poster2');">SPRITUEL   </a></div>
+        <div class="nav_categorie"><a href="javascript:glisser('poster2');">ARTISANAL  </a></div>
+        <div class="nav_categorie"><a href="javascript:glisser('poster2');">GUSTATIF   </a></div>
+        <div class="nav_categorie"><a href="javascript:glisser('poster2');">CONVIVIAL  </a></div>
+    </nav>
+
+    <div class="poster" id="poster0" style="background:#ffffff;">
+        <a href="javascript:void(0);"> 
+            <div class="poster_fond">
+                <div class="poster_logo_conteneur">
+                    <h1>Accueil....</h1>
+                </div>
+            </div>
+        </a>
+    </div>
+
 
     <div class="poster" id="poster1" style="background:#2288ff;">
         <a href="javascript:void(0);"> 
@@ -68,6 +95,10 @@
             <div class="vignette" style="height:100px;"></div>
             <div class="vignette" style="height:300px;"></div>
         </div>
+    </div>
+
+    <div class="pleine_page">
+        <h1>Contact</h1>
     </div>
 
 </body>
