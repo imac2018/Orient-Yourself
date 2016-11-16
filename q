@@ -19,6 +19,7 @@
 /* A défaut d'un meilleur nom... x) */
 .poster {
     overflow:hidden;
+    background-size:cover;
 }
 .poster, .poster_fond {
     width:100%; height:100%;

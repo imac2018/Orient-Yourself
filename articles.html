@@ -21,9 +21,23 @@
 <body>
 
     <!-- Cet élément disparait après un certain temps. -->
-    <div id="page_chargement">
-        <img alt="Logo" src="img/Planche_logo.png" style="height:100%;">
+    <div class="poster" id="page_chargement">
+        <div class="poster_fond">
+            <div class="poster_logo_conteneur">
+                <img alt="Logo" src="img/Planche_logo.png" style="height:200px;">
+            </div>
+        </div>
     </div>
+
+    <nav class="nav_categories">
+        <a href="javascript:glisser('poster1');"><img class="nav_categorie_logo" alt="logo" src="img/logo_blanc.png"></a>
+        <div>POUR UN VOYAGE...</div>
+        <div class="nav_categorie"><a href="javascript:glisser('poster1');">PANORAMIQUE</a></div>
+        <div class="nav_categorie"><a href="javascript:glisser('poster2');">SPRITUEL   </a></div>
+        <div class="nav_categorie"><a href="javascript:glisser('poster2');">ARTISANAL  </a></div>
+        <div class="nav_categorie"><a href="javascript:glisser('poster2');">GUSTATIF   </a></div>
+        <div class="nav_categorie"><a href="javascript:glisser('poster2');">CONVIVIAL  </a></div>
+    </nav>
 
     <nav class="nav_articles">
         <p><a href="javascript:glisser('poster1');">
@@ -34,18 +48,8 @@
         </a></p>
     </nav>
 
-    <nav class="nav_categories">
-        <a href="javascript:glisser('poster1');">
-            <img class="nav_categorie_logo" alt="logo" src="img/logo_blanc.png">
-        </a>
-        <div class="nav_categorie"><a href="javascript:glisser('poster1');">PANORAMIQUE</a></div>
-        <div class="nav_categorie"><a href="javascript:glisser('poster2');">SPRITUEL   </a></div>
-        <div class="nav_categorie"><a href="javascript:glisser('poster2');">ARTISANAL  </a></div>
-        <div class="nav_categorie"><a href="javascript:glisser('poster2');">GUSTATIF   </a></div>
-        <div class="nav_categorie"><a href="javascript:glisser('poster2');">CONVIVIAL  </a></div>
-    </nav>
 
-    <div class="poster" id="poster0" style="background:#ffffff;">
+    <div class="poster" id="poster0" style="background-image:url('img/Barazekn-6.jpg');">
         <a href="javascript:void(0);"> 
             <div class="poster_fond">
                 <div class="poster_logo_conteneur">
@@ -56,7 +60,7 @@
     </div>
 
 
-    <div class="poster" id="poster1" style="background:#2288ff;">
+    <div class="poster" id="poster1" style="background-image:url('img/Barazekn-6.jpg');">
         <a href="javascript:void(0);"> 
             <div class="poster_fond">
                 <div class="poster_logo_conteneur">
@@ -69,7 +73,7 @@
     </div>
 
     <!-- Juste un copier-coller du dessus.-->
-    <div class="poster" id="poster2" style="background:#ff8822;">
+    <div class="poster" id="poster2" style="background-image:url('img/Barazekn-6.jpg');">
         <a href="javascript:void(0);"> 
             <div class="poster_fond">
                 <div class="poster_logo_conteneur">
@@ -97,7 +101,7 @@
         </div>
     </div>
 
-    <div class="pleine_page">
+    <div class="pleine_page" style="background-image:url('img/Barazekn-6.jpg');">
         <h1>Contact</h1>
     </div>
 
