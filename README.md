@@ -4,8 +4,8 @@ https://imac2018.github.io/Orient-Yourself
 
 # Gallerie d'images
 *C'est juste une liste des liens vers les images dans un Markdown.*  
-![Page d'accueil](https://alpha.wallhaven.cc/wallpaper/124293)  
-![Page 2](https://alpha.wallhaven.cc/wallpaper/413687)  
+![Page d'accueil](https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-124293.jpg)  
+![Page 2](https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-413687.jpg)  
 ![Page 3](https://s-media-cache-ak0.pinimg.com/originals/8b/16/83/8b168329ae3c1af59cb26b0a3372a211.jpg)  
 ![Page 5](http://thesavorycafened.com/wp-content/uploads/2014/06/Turkish-sand-coffee.jpg)
 ![Page 5 bis](http://thesavorycafened.com/wp-content/uploads/2014/06/Turkish-sand-coffee.jpg)

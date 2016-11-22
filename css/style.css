@@ -2,6 +2,8 @@
  *
  * @media screen and (max-width:780px) {...}
  * @media screen and (max-height:580px) {...}
+ * @media screen and (min-aspect-ratio:1/1) { .pleine_page { background-color:red;} }
+ * @media screen and (max-aspect-ratio:1/1) { .pleine_page { background-color:cyan;} }
  */
 
 #page_chargement {
