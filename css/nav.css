@@ -1,0 +1,37 @@
+
+.nav_articles {
+    z-index:1;
+    /* background-color:rgba(0,0,0,0.8); */
+    position:fixed;
+    margin-right:10px;
+    right:36%;
+    top:50%;
+}
+
+.nav_article_puce {
+    width:  20px;
+    margin: 10px 0;
+}
+
+.nav_categories {
+    z-index:1;
+    /* background-color:rgba(0,0,0,0.8); */
+    position:fixed;
+    top:0; left:0;
+    width:64%;
+}
+.nav_categories > * {
+    display:inline;
+}
+
+.nav_categorie {
+    margin: 10px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight:bold;
+}
+.nav_categorie_logo {
+    width: 140px;
+    margin: 10px;
+}
+
+
