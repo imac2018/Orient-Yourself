@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+        
+    
     <meta charset="utf-8">
+<!-- 
+    CE FICHIER A ETE GENERE AUTOMATIQUEMENT VIA M4. 
+    Ca ne sert à rien de le modifier. Modifiez la page dans m4html/ à la place. 
+-->
     <meta name="viewport"    content="width=device-width, initial-scale=1">
     <meta name="author"      content="Orient Yourself">
-    <meta name="description" content="Explorez ce que l'orient a à vous offrir.">
-    <meta name="keywords"    content="orient, yourself, voyage, culture">
-    <title>Orient Yourself</title>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   
@@ -19,19 +22,37 @@
     <link  href="css/style.css"     rel="stylesheet" type="text/css">
     <link  href="css/nav.css"       rel="stylesheet" type="text/css">
     <link  href="css/scrollbar.css" rel="stylesheet" type="text/css">
+
+
+    <meta name="description" content="Explorez ce que l'orient a à vous offrir.">
+    <meta name="keywords"    content="orient, yourself, voyage, culture">
+    <title>Orient Yourself</title>
 </head>
 <body>
 
     <!-- Cet élément disparait après un certain temps. -->
-    <div class="poster" id="page_chargement">
-        <div class="poster_fond">
-            <div class="poster_logo_conteneur">
-                <img alt="Logo" src="img/Planche_logo.png" style="height:200px;">
-            </div>
+<div class="poster" id="page_chargement">
+    <div class="poster_fond">
+        <div class="poster_logo_conteneur">
+            <img alt="Logo" src="img/Planche_logo.png" style="height:200px;">
         </div>
     </div>
+</div>
 
-    <div class="pleine_page" style="background-image:url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-124293.jpg'); background-size:cover;"></div>
+    <nav class="nav_categories">
+    <a href="index.html"><img class="nav_categorie_logo" alt="logo" src="img/logo_blanc.png"></a>
+    <div>POUR UN VOYAGE...</div>
+    <div class="nav_categorie"><a href="javascript:glisser('poster1');">PANORAMIQUE</a></div>
+    <div class="nav_categorie"><a href="javascript:glisser('poster2');">SPIRITUEL  </a></div>
+    <div class="nav_categorie"><a href="javascript:glisser('poster2');">ARTISANAL  </a></div>
+    <div class="nav_categorie"><a href="javascript:glisser('poster2');">GUSTATIF   </a></div>
+    <div class="nav_categorie"><a href="javascript:glisser('poster2');">CONVIVIAL  </a></div>
+    <a href="javascript:alert('La recherche, c\'est plus tard !');"><img alt="chercher" src="img/loupe.png" style="width:16px;"></a>
+</nav>
+
+
+
+    <div class="pleine_page" style="background-image:url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-219501.jpg'); background-size:cover;"></div>
 
 </body>
 </html>

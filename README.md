@@ -1,9 +1,14 @@
 # Orient-Yourself
 
-https://imac2018.github.io/Orient-Yourself
+[https://imac2018.github.io/Orient-Yourself](https://imac2018.github.io/Orient-Yourself)  
+  
+Les pages sont générées avec `GNU Make` et `GNU M4`.  
+Les fichiers `m4html/*.m4.html` sont les sources des pages à générer.  
+Les fichiers `m4html/*.html` sont des bouts d'HTML incluables par les pages, via la directive `m4_include()`.
 
 # Gallerie d'images
 *C'est juste une liste des liens vers les images dans un Markdown.*  
+![Page d'accueil](https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-219501.jpg)
 ![Page d'accueil](https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-124293.jpg)  
 ![Page 2](https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-413687.jpg)  
 ![Page 3](https://s-media-cache-ak0.pinimg.com/originals/8b/16/83/8b168329ae3c1af59cb26b0a3372a211.jpg)  
