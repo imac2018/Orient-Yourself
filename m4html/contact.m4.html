@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    m4_include(head_base.html)
+    <meta name="description" content="Explorez ce que l'orient a à vous offrir.">
+    <meta name="keywords"    content="orient, yourself, voyage, culture">
+    <title>Orient Yourself</title>
+</head>
+<body>
+
+    m4_include(chargement.html)
+
+    <div style="position:fixed; top:0; left:0; width:100%;">
+    <table style="width:100%;"><tr><td>
+        <a href="index.html"><img class="nav_categorie_logo" alt="logo" src="img/logo_blanc.png"></a>
+    </td><td>
+        <div style="text-align:right;">
+            <a href="javascript:alert('La recherche, c\'est plus tard !');"><img alt="chercher" src="img/loupe.png" style="width:16px;"></a>
+            A PROPOS DE MON VOYAGE
+        </div>
+    </td></tr></table>
+    </div>
+
+<style>
+.blacktxt { color:black; }
+.blackbg { background-color:black; color:white; }
+.whitebg { background-color:white; color:black; }
+.border0 {border:0;}
+.w100 {width:100%;}
+.msg {height:150px; max-height:150px; resize:none; }
+.centered { width:100%; text-align:center; }
+.tx1 { font-family:Bebas, sans-serif; font-size:32px; }
+.tx2 { }
+</style>
+
+    <div class="poster" id="poster0" style="background-image:url('http://yoanlecoq.com/dl/oy/img_contact.jpg');">
+        <div class="poster_fond">
+            <div class="poster_logo_conteneur">
+                <table>
+                    <tr><td class="w100 centered">
+                        <p class="tx1 blacktxt">CONTACT</p>
+                        <p class="tx2 blacktxt">Partagez vos ressentis avec nous</p>
+                    </td></tr>
+                    <tr><td class="w100 centered" style="">
+                        <form action="">
+                            <input    class="w100 border0 blackbg" name="email" type="text" placeholder="Email"><br><br>
+                            <textarea class="w100 border0 blackbg msg" name="msg" rows="4" cols="50">Bonjour !</textarea>
+                            <input    class="w100 border0 whitebg" type="submit" value="Submit">
+                        </form>
+                    </td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="footer_collant">
+            m4_include(nav_footer.m4)
+            xx_nav_footer()
+    </footer>
+</body>
+</html>
+
