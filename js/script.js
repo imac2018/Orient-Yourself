@@ -27,6 +27,6 @@ function pastilles_chargees() {
 
 // Quand le DOM est pret...
 $(function(){
-    $("#page_chargement").delay(800).fadeOut("slow");
+    $("#page_chargement").delay(4000).fadeOut("slow");
     //pastilles_chargees();
 });
