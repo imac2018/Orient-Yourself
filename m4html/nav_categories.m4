@@ -34,7 +34,7 @@ m4_define(<:xx_nav_categories_chmin:>,
 </div>
 )
 
-m4_define(<:xx_nav_categories_chemin_helper:>, 
+m4_define(<:xx_nav_categories_chemin_script:>, 
 <script style="display:none;">
 chemin_transition_ms = 200;
 function chemin_eclairer(n) {
@@ -50,16 +50,11 @@ function chemin_eteindre(n) {
         $("#chemin"+i).stop().fadeTo(chemin_transition_ms, .5);
 }
 </script>
-<div style="width:$1; text-align:center; display:inline-block;">
-m4_dnl xx_nav_categories_perle(panoramique.html, img/menu_accueil/n1_n.png, img/menu_accueil/n1_c.png, img/menu_accueil/n1_s.png,  4.97335701598579040852%, 1, -22px, -30px, PANORAMIQUE)
-m4_dnl xx_nav_categories_chmin(panoramique.html, img/menu_accueil/c1.png,   img/menu_accueil/c1.png,   img/menu_accueil/c1.png,   18.25932504440497335701%, 1, -22px, -30px, PANORAMIQUE)
-m4_dnl xx_nav_categories_perle(spirituel.html,   img/menu_accueil/n2_n.png, img/menu_accueil/n2_c.png, img/menu_accueil/n2_s.png,  5.11545293072824156305%, 2, -12px, -30px, SPIRITUEL)
-m4_dnl xx_nav_categories_chmin(spirituel.html,   img/menu_accueil/c2.png,   img/menu_accueil/c2.png,   img/menu_accueil/c2.png,   15.73712255772646536412%, 2, -22px, -30px, SPIRITUEL)
-m4_dnl xx_nav_categories_perle(artisanal.html,   img/menu_accueil/n3_n.png, img/menu_accueil/n3_c.png, img/menu_accueil/n3_s.png,  5.00888099467140319715%, 3, -18px, -22px, ARTISANAL)
-m4_dnl xx_nav_categories_chmin(artisanal.html,   img/menu_accueil/c3.png,   img/menu_accueil/c3.png,   img/menu_accueil/c3.png,   17.93960923623445825932%, 3, -22px, -30px, ARTISANAL)
-m4_dnl xx_nav_categories_perle(gustatif.html,    img/menu_accueil/n4_n.png, img/menu_accueil/n4_c.png, img/menu_accueil/n4_s.png,  5.15097690941385435168%, 4, -16px, -30px, GUSTATIF)
-m4_dnl xx_nav_categories_chmin(gustatif.html,    img/menu_accueil/c4.png,   img/menu_accueil/c4.png,   img/menu_accueil/c4.png,   22.77087033747779751332%, 4, -22px, -30px, GUSTATIF)
-m4_dnl xx_nav_categories_perle(convivial.html,   img/menu_accueil/n5_n.png, img/menu_accueil/n5_c.png, img/menu_accueil/n5_s.png,  5.04440497335701598579%, 5, -18px, -26px, CONVIVIAL)
+)
+
+m4_define(<:xx_nav_categories_chemin_accueil:>, 
+xx_nav_categories_chemin_script()
+<div style="width:100%; text-align:center; display:inline-block;">
   xx_nav_categories_perle(panoramique.html, img/menu_accueil/n1_n.png, img/menu_accueil/n1_c.png, img/menu_accueil/n1_s.png,  5.47417116422513492675%, 1, -22px, -30px, PANORAMIQUE)
   xx_nav_categories_chmin(panoramique.html, img/menu_accueil/c1.png,   img/menu_accueil/c1.png,   img/menu_accueil/c1.png,   17.19352351580570547417%, 1, -22px, -30px, PANORAMIQUE)
   xx_nav_categories_perle(spirituel.html,   img/menu_accueil/n2_n.png, img/menu_accueil/n2_c.png, img/menu_accueil/n2_s.png,  7.71010023130300693909%, 2, -12px, -30px, SPIRITUEL)
@@ -71,8 +66,21 @@ m4_dnl xx_nav_categories_perle(convivial.html,   img/menu_accueil/n5_n.png, img/
   xx_nav_categories_perle(convivial.html,   img/menu_accueil/n5_n.png, img/menu_accueil/n5_c.png, img/menu_accueil/n5_s.png,  5.01156515034695451040%, 5, -18px, -26px, CONVIVIAL)
 </div>
 )
-m4_define(<:xx_nav_categories_chemin:>,         xx_nav_categories_chemin_helper(30%))
-m4_define(<:xx_nav_categories_chemin_accueil:>, xx_nav_categories_chemin_helper(100%))
+
+m4_define(<:xx_nav_categories_chemin:>, 
+xx_nav_categories_chemin_script()
+<div style="width:100%; text-align:center; display:inline-block;">
+  xx_nav_categories_perle(panoramique.html, img/menu_simple/n1_n.png, img/menu_simple/n1_c.png, img/menu_simple/n1_s.png,  4.97335701598579040852%, 1, -22px, -30px, PANORAMIQUE)
+  xx_nav_categories_chmin(panoramique.html, img/menu_simple/c1.png,   img/menu_simple/c1.png,   img/menu_simple/c1.png,   18.25932504440497335701%, 1, -22px, -30px, PANORAMIQUE)
+  xx_nav_categories_perle(spirituel.html,   img/menu_simple/n2_n.png, img/menu_simple/n2_c.png, img/menu_simple/n2_s.png,  5.11545293072824156305%, 2, -12px, -30px, SPIRITUEL)
+  xx_nav_categories_chmin(spirituel.html,   img/menu_simple/c2.png,   img/menu_simple/c2.png,   img/menu_simple/c2.png,   15.73712255772646536412%, 2, -22px, -30px, SPIRITUEL)
+  xx_nav_categories_perle(artisanal.html,   img/menu_simple/n3_n.png, img/menu_simple/n3_c.png, img/menu_simple/n3_s.png,  5.00888099467140319715%, 3, -18px, -22px, ARTISANAL)
+  xx_nav_categories_chmin(artisanal.html,   img/menu_simple/c3.png,   img/menu_simple/c3.png,   img/menu_simple/c3.png,   17.93960923623445825932%, 3, -22px, -30px, ARTISANAL)
+  xx_nav_categories_perle(gustatif.html,    img/menu_simple/n4_n.png, img/menu_simple/n4_c.png, img/menu_simple/n4_s.png,  5.15097690941385435168%, 4, -16px, -30px, GUSTATIF)
+  xx_nav_categories_chmin(gustatif.html,    img/menu_simple/c4.png,   img/menu_simple/c4.png,   img/menu_simple/c4.png,   22.77087033747779751332%, 4, -22px, -30px, GUSTATIF)
+  xx_nav_categories_perle(convivial.html,   img/menu_simple/n5_n.png, img/menu_simple/n5_c.png, img/menu_simple/n5_s.png,  5.04440497335701598579%, 5, -18px, -26px, CONVIVIAL)
+</div>
+)
 
 m4_define(<:xx_nav_categories_entete:>, 
 <nav class="nav_categories">
