@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    m4_include(base.m4)
+    m4_include(head_base.html)
+    <meta name="description" content="Explorez ce que l'orient a à vous offrir.">
+    <meta name="keywords"    content="orient, yourself, voyage, culture">
+    <title>Orient Yourself</title>
+</head>
+<body>
+
+    m4_dnl xx_nav_categories_entete
+    m4_dnl xx_nav_articles(<:
+    m4_dnl     xx_nav_article_article(<:1:>)
+    m4_dnl     xx_nav_article_article(<:2:>)
+    m4_dnl     xx_nav_article_article(<:3:>)
+    m4_dnl     xx_nav_article_gallerie()
+    m4_dnl :>)
+
+
+    <div class="article_toast article_toast1">
+        <div style="height:20%;"></div>
+        <div style="height:50%;" class="article_toast_txt article_toast_txt1">
+            xx_histoire_gustatif_les_mezzes()
+        </div>
+        <p class="plie_seulement">...</p>
+        <a class="plie_seulement" href="javascript:deplier_article(1);"><p>Lire la suite</p></a>
+        <a class="deplie_seulement" href="javascript:plier_article(1);"><p>Replier</p></a>
+
+    <table style="width:100%;"><tr>
+        <td style="text-align:center;"><img src="img/macro1.png" style="width:100%; transform:translateX(50%);"></td>
+        <td style="text-align:center;">
+            <a href="javascript:void(0);">
+                <img src="img/carre.png"  style="width:100%; position:relative; z-index:2;">
+                <br><p style="color:black; position:relative; z-index:8; transform:translateY(-80px);">Voir sur la carte</p>
+            </a>
+        </td>
+        <td style="text-align:center;"><img src="img/macro2.png" style="width:100%; transform:translateX(-50%);"></td>
+    </tr></table>
+
+    </div>
+    
+    <style>
+    .article_toast {
+        width:40%; height:100%; background-color:black;
+    }
+    .article_toast_txt {
+        -webkit-column-count: 1;
+           -moz-column-count: 1;
+                column-count: 1;
+        -webkit-column-gap:   20px;
+           -moz-column-gap:   20px;
+                column-gap:   20px;
+       /* -webkit-column-rule:  1px solid lightblue; */
+       /*    -moz-column-rule:  1px solid lightblue; */
+       /*         column-rule:  1px solid lightblue; */
+    }
+    .article_toast_txt, .article_toast_txt * {
+        overflow:hidden;
+        line-height: 1.2;
+    }
+    .article_toast h2 {
+        -webkit-column-span: all;
+                column-span: all;
+    }
+    .deplie_seulement {
+        display:none;
+    }
+    </style>
+
+
+    <script>
+    article_duree_ms = 200;
+    function deplier_article(i) {
+        $(".article_toast"+i)
+            .animate({ width: "+=30%" }, article_duree_ms);
+        $(".article_toast_txt"+i)
+            .delay(article_duree_ms/2).queue(function(next) { $(this).css("column-count", "2"); next(); })
+        $(".plie_seulement")  .fadeOut({ duration:article_duree_ms} );
+        $(".deplie_seulement").fadeIn( { duration:article_duree_ms} );
+    }
+    function plier_article(i) {
+        $(".article_toast"+i)
+            .animate({ width: "-=30%" }, article_duree_ms);
+        $(".article_toast_txt"+i)
+            .delay(article_duree_ms/2).queue(function(next) { $(this).css("column-count", "1"); next(); })
+        $(".plie_seulement")  .fadeIn( {duration:article_duree_ms} );
+        $(".deplie_seulement").fadeOut({duration:article_duree_ms} );
+    }
+    </script>
+
+
+
+    m4_dnl xx_article(1, xx_img_les_mezzes, white, black, Jour ?, Les mezzés, Liban, xx_histoire_gustatif_les_mezzes)
+    m4_dnl xx_article(2, xx_img_les_mezzes, white,   red, Jour ?, Les mezzés, Liban, xx_histoire_gustatif_les_mezzes)
+    m4_dnl xx_article(3, xx_img_les_mezzes, white,   red, Jour ?, Les mezzés, Liban, xx_histoire_gustatif_les_mezzes)
+
+    m4_dnl xx_gallerie(#111111, #444444, <:
+    m4_dnl     xx_gallerie_vignette(<:132px:>)
+    m4_dnl     xx_gallerie_vignette(<:301px:>)
+    m4_dnl     xx_gallerie_vignette(<:103px:>)
+    m4_dnl     xx_gallerie_vignette(<:188px:>)
+    m4_dnl     xx_gallerie_vignette(<:150px:>)
+    m4_dnl     xx_gallerie_vignette(<:250px:>)
+    m4_dnl     xx_gallerie_vignette(<:250px:>)
+    m4_dnl     xx_gallerie_vignette(<:126px:>)
+    m4_dnl     xx_gallerie_vignette(<:145px:>)
+    m4_dnl :>)
+
+    m4_dnl xx_categorie_footer
+</body>
+</html>
