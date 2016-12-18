@@ -26,10 +26,10 @@ m4_define(<:xx_article:>, <:
     <div class="splash"  style="background-image:url('$2'); background-size:cover;"></div>
     <div class="article" id="article$1" style="background:$3;">
         <div class="article_entete">
-            <div style="display:inline-block;"><h1>$5</h1></div>
+            <div style="display:inline-block;"><h1 style="font-size:1.2em; font-weight:lighter; transform:translateY(-16px);">$5</h1></div>
             <div style="float:right;">
-                <h2 style="display:inline-block; text-align:right;">$6</h2>
-                <h2 style="display:inline-block; text-align:left; ">$7</h2>
+                <h2 style="display:inline-block; text-align:right; font-size: 1.5em; line-height: 1.2;">$6</h2>
+                <h2 style="display:inline-block; text-align:right; font-size: 1.5em; line-height: 1.2; font-weight:lighter; margin-left:10px;">$7</h2>
             </div>
         </div>
         <div class="article_texte" id="article_texte$1">

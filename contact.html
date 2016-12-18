@@ -68,6 +68,10 @@
 
 
 
+
+
+
+
         <meta charset="utf-8">
 <!-- 
     CE FICHIER A ETE GENERE AUTOMATIQUEMENT VIA M4. 
@@ -305,16 +309,18 @@
 <body>
 
     
-    <div style="position:fixed; top:0; left:0; width:100%;">
-    <table style="width:100%;"><tr><td>
-        <a href="index.html"><img class="nav_categorie_logo" alt="logo" src="img/logo_blanc.png"></a>
-    </td><td>
-        <div style="text-align:right;">
-            <a href="javascript:alert('La recherche, c\'est plus tard !');"><img alt="chercher" src="img/loupe.png" style="width:16px;"></a>
-            A PROPOS DE MON VOYAGE
-        </div>
-    </td></tr></table>
-    </div>
+    <div style="position:fixed; top:0; left:0; width:100%; z-index:800;">
+<table style="width:100%;"><tr><td>
+    <a href="index.html"><img class="nav_categorie_logo" alt="logo" src="img/logo_blanc.png"></a>
+</td><td style="text-align:right; vertical-align:middle;">
+    <!-- <a href="javascript:alert('La recherche, c\'est plus tard !');"><img alt="chercher" src="img/loupe.png" style="width:16px;"></a> -->
+    <a href="mon_voyage.html" class="op8">
+        <span class="bebasneue">A PROPOS DE MON VOYAGE</span>
+        <img alt="mon_voyage" src="img/sacados.png" style="height:26px; margin:4px; transform:translateY(10px);">
+    </a>
+</td></tr></table>
+</div>
+
 
 <style>
 .blacktxt, .blacktxt * { color:black; }
@@ -369,12 +375,11 @@
     <footer class="footer_collant whitebg blacktxt" style="height:30%;">
         <span class="footer_collant"> <!-- hack -->
         
-<nav>
-    <a href="mon_voyage.html">MON VOYAGE</a>
-    <a href="contact.html">CONTACT</a>
-    <a href="mentions_legales.html">MENTIONS L&Eacute;GALES</a>
-    <a href="qui_sommes_nous.html">QUI SOMMES-NOUS</a>
-</nav>
+<nav class="bebasneue"><table style="width:100%;"><tr>
+    <td style="text-align:center;"><a class="op8" href="contact.html">CONTACT</a></td>
+    <td style="text-align:center;"><a class="op8" href="mentions_legales.html">MENTIONS L&Eacute;GALES</a></td>
+    <td style="text-align:center;"><a class="op8" href="qui_sommes_nous.html">QUI SOMMES-NOUS</a></td>
+</tr></table></nav>
 
         </span>
     </footer>

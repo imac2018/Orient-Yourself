@@ -20,3 +20,16 @@ a:focus, a:focus *, a:hover, a:hover * {
     text-decoration: underline;
 }
 
+.bebasneue, .bebasneue * {
+    font-family: "Bebas Neue";
+    font-size:17px;
+}
+.cairo, .cairo * {
+    font-family: "Cairo";
+}
+.op8 {
+    opacity : .8;
+}
+.op8:focus, .op8:focus *, .op8:hover, .op8:hover * {
+    opacity : 1;
+}

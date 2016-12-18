@@ -1,5 +1,5 @@
-m4_define(<:xx_img_cheik_zayed:>, <:https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-413687.jpg:>)
-m4_define(<:xx_img_burj_khalifa:>, <:http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2012/12/burj-khalifa.jpg:>)
+m4_define(<:xx_img_cheik_zayed:>, <:img/cheikzayed.jpg:>)
+m4_define(<:xx_img_burj_khalifa:>, <:img/burj-khalifa.jpg:>)
 m4_define(<:xx_img_poterie_meybod:>, <:img/meybod_craftsman.jpg:>)
 m4_define(<:xx_img_les_mezzes:>, <:img/mezze.jpg:>)
-m4_define(<:xx_img_kess_tey:>, <:http://www.lemag.ma/photo/art/default/6088427-9087580.jpg?v=1385661205:>)
+m4_define(<:xx_img_kess_tey:>, <:img/kesstey.jpg:>)
