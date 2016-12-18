@@ -9,13 +9,13 @@
 }
 
 .nav_article_puce {
-    width:  20px;
+    width:  16px;
     margin: 4px 0;
 }
 
 .nav_categories {
     z-index:1;
-    /* background-color:rgba(0,0,0,0.8); */
+    background: linear-gradient(rgba(37,37,79,.55), rgba(0,0,0,0));
     position:fixed;
     top:0; left:0;
     width:64%;

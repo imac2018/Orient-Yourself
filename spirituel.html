@@ -52,6 +52,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <meta charset="utf-8">
 <!-- 
     CE FICHIER A ETE GENERE AUTOMATIQUEMENT VIA M4. 
@@ -65,6 +81,215 @@
             crossorigin="anonymous">
     </script>
     <script src="js/script.js"      type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVtUXJ1AiE49ZmTGwn0GKA00hQwnHdl58"></script>
+
+<script>
+	map_style = [
+    {
+        "featureType": "all",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#4b480f"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "gamma": 0.01
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "saturation": -31
+            },
+            {
+                "lightness": -33
+            },
+            {
+                "weight": 2
+            },
+            {
+                "gamma": 0.8
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#f4f0e2"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#191935"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 30
+            },
+            {
+                "saturation": 30
+            },
+            {
+                "color": "#191935"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "saturation": 20
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 20
+            },
+            {
+                "saturation": -20
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#191935"
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 10
+            },
+            {
+                "saturation": -30
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "saturation": 25
+            },
+            {
+                "lightness": 25
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#191935"
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "lightness": "-26"
+            },
+            {
+                "saturation": "100"
+            },
+            {
+                "color": "#ffffff"
+            }
+        ]
+    }
+];
+</script>
+
+
+
+
+
     <link  href="img/favicon.png"   rel="icon"       type="image/png">
     <link  href="css/polices.css"   rel="stylesheet" type="text/css">
     <link  href="css/defaut.css"    rel="stylesheet" type="text/css">
@@ -230,10 +455,28 @@ function chemin_eteindre(n) {
 #article1 p, #article1 h1, #article1 h2, #article1 div {
     color:black;
 }
+#article1 article_texte {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+    -webkit-column-gap:   20px;
+       -moz-column-gap:   20px;
+            column-gap:   20px;
+ /* -webkit-column-rule:  1px solid lightblue; */
+ /*    -moz-column-rule:  1px solid lightblue; */
+ /*         column-rule:  1px solid lightblue; */
+}
+#article1 article_texte, #article1 article_texte * {
+    overflow:hidden;
+    line-height: 1.2;
+}
+#deplie_seulement1 {
+    display:none;
+}
 </style>
-<div class="article_splash_conteneur" id="article1">
+<div class="article_splash_conteneur">
     <div class="splash"  style="background-image:url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-413687.jpg'); background-size:cover;"></div>
-    <div class="article" style="background:white;">
+    <div class="article" id="article1" style="background:white;">
         <div class="article_entete">
             <div style="display:inline-block;"><h1>Jour 1</h1></div>
             <div style="float:right;">
@@ -241,22 +484,29 @@ function chemin_eteindre(n) {
                 <h2 style="display:inline-block; text-align:left; ">Abu<br>Dhabi</h2>
             </div>
         </div>
-        <div class="article_texte">
+        <div class="article_texte" id="article_texte1">
             
-    La grande Mosquée Cheikh Zayed - Abu Dhabi
-
-
-    Cette visite a profondément marqué mon voyage. Lorsque je me suis retrouvé face à cette immense mosquée, je me suis soudain senti minuscule. L’adhan (appel à la prière) résonnait du haut du minaret. Les nombreux fidèles rejoignaient d’un pas apaisé le bâtiment d’un blanc éclatant. Le parterre de dalle s'étendant entre moi et l'édifice luisait, reflétant le ciel où quelques nuages seulement glissaient sous la force du vent. Je plissais les yeux pour regarder le grand minaret, le soleil des Emirat m'aveuglant. Une sensation de quiétude me gagnait alors que je me joignais à la marche des croyants vers les grandes portes.
-    A l’intérieur, je découvrais un espace immense. Le sol était couvert d’un splendide tapis iranien. En levant la tête, je pouvais admirer un plafond orné et sculpté. Un lustre énorme surplombait nos têtes. 
-    J’avoue, je suis resté bouche-bée pendant un moment. Mais peut-être que quelques chiffres pourront vous aider à comprendre ce que j’ai pu ressentir : 
-    La mosquée peut accueillir jusqu’à 40 000 fidèles! Elle comprend 80 dômes et environ 1000 colonnes. Les lustres sont plaqués d’or et celui de la salle de prière principale fait 10 mètres de diamètre pour 15 mètres de haut. Waou, c’est juste énorme. Et ce fameux tapis sur lesquels je faisais timidement quelques pas n’est autre que le plus grand tapis tissé à la main au monde. 
-    Des bassins entourent la mosquée et scintillent au soleil comme le blanc et l’or qui couvre l’édifice. La nuit, ce dernier est illuminé par un système d’éclairage unique reflétant les phases de la lune.
-    Tout est à couper le souffle.
-    On reconnait bien là les Emiratis qui raffolent des records du monde en architecture. Je l’avais bien compris dès ma visite de Burj Khalifat (lien vers le lieu impressionnant d’EAU)
-    Pendant un moment, le temps s’est arrêté. Cette visite assure un moment magique, bercé de spiritualité.
+    Cette visite a profondément marqué mon voyage. Lorsque je me suis retrouvé face à cette immense mosquée, je me suis soudain senti minuscule. L’adhan (appel à la prière) résonnait du haut du minaret. Les nombreux fidèles rejoignaient d’un pas apaisé le bâtiment d’un blanc éclatant. Le parterre de dalle s'étendant entre moi et l'édifice luisait, reflétant le ciel où quelques nuages seulement glissaient sous la force du vent. Je plissais les yeux pour regarder le grand minaret, le soleil des Emirat m'aveuglant. Une sensation de quiétude me gagnait alors que je me joignais à la marche des croyants vers les grandes portes.<br>
+    A l’intérieur, je découvrais un espace immense. Le sol était couvert d’un splendide tapis iranien. En levant la tête, je pouvais admirer un plafond orné et sculpté. Un lustre énorme surplombait nos têtes. <br>
+    J’avoue, je suis resté bouche-bée pendant un moment. Mais peut-être que quelques chiffres pourront vous aider à comprendre ce que j’ai pu ressentir : <br>
+    La mosquée peut accueillir jusqu’à 40 000 fidèles! Elle comprend 80 dômes et environ 1000 colonnes. Les lustres sont plaqués d’or et celui de la salle de prière principale fait 10 mètres de diamètre pour 15 mètres de haut. Waou, c’est juste énorme. Et ce fameux tapis sur lesquels je faisais timidement quelques pas n’est autre que le plus grand tapis tissé à la main au monde. <br>
+    Des bassins entourent la mosquée et scintillent au soleil comme le blanc et l’or qui couvre l’édifice. La nuit, ce dernier est illuminé par un système d’éclairage unique reflétant les phases de la lune.<br>
+    Tout est à couper le souffle.<br>
+    On reconnait bien là les Emiratis qui raffolent des records du monde en architecture. Je l’avais bien compris dès <a href="panoramique.html">ma visite de Burj Khalifat</a>     Pendant un moment, le temps s’est arrêté. Cette visite assure un moment magique, bercé de spiritualité.<br>
 
         </div>
-        <img alt="foo" src="img/mais_ou_que_cetait.png" style="display:block; width:80%; margin:auto;">
+                        
+
+        <table style="width:100%;"><tr>
+            <td style="text-align:center;"><img src="img/macro1.png" style="width:100%; transform:translateX(50%);"></td>
+            <td style="text-align:center;">
+                <a href="javascript:void(0);">
+                    <img src="img/carre.png"  style="width:100%; position:relative; z-index:2;">
+                                    </a>
+            </td>
+            <td style="text-align:center;"><img src="img/macro2.png" style="width:100%; transform:translateX(-50%);"></td>
+        </tr></table>
+
     </div>
 </div>
 
@@ -265,10 +515,28 @@ function chemin_eteindre(n) {
 #article2 p, #article2 h1, #article2 h2, #article2 div {
     color:red;
 }
+#article2 article_texte {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+    -webkit-column-gap:   20px;
+       -moz-column-gap:   20px;
+            column-gap:   20px;
+ /* -webkit-column-rule:  1px solid lightblue; */
+ /*    -moz-column-rule:  1px solid lightblue; */
+ /*         column-rule:  1px solid lightblue; */
+}
+#article2 article_texte, #article2 article_texte * {
+    overflow:hidden;
+    line-height: 1.2;
+}
+#deplie_seulement2 {
+    display:none;
+}
 </style>
-<div class="article_splash_conteneur" id="article2">
+<div class="article_splash_conteneur">
     <div class="splash"  style="background-image:url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-413687.jpg'); background-size:cover;"></div>
-    <div class="article" style="background:white;">
+    <div class="article" id="article2" style="background:white;">
         <div class="article_entete">
             <div style="display:inline-block;"><h1>Jour ?</h1></div>
             <div style="float:right;">
@@ -276,22 +544,29 @@ function chemin_eteindre(n) {
                 <h2 style="display:inline-block; text-align:left; ">Abu<br>Dhabi</h2>
             </div>
         </div>
-        <div class="article_texte">
+        <div class="article_texte" id="article_texte2">
             
-    La grande Mosquée Cheikh Zayed - Abu Dhabi
-
-
-    Cette visite a profondément marqué mon voyage. Lorsque je me suis retrouvé face à cette immense mosquée, je me suis soudain senti minuscule. L’adhan (appel à la prière) résonnait du haut du minaret. Les nombreux fidèles rejoignaient d’un pas apaisé le bâtiment d’un blanc éclatant. Le parterre de dalle s'étendant entre moi et l'édifice luisait, reflétant le ciel où quelques nuages seulement glissaient sous la force du vent. Je plissais les yeux pour regarder le grand minaret, le soleil des Emirat m'aveuglant. Une sensation de quiétude me gagnait alors que je me joignais à la marche des croyants vers les grandes portes.
-    A l’intérieur, je découvrais un espace immense. Le sol était couvert d’un splendide tapis iranien. En levant la tête, je pouvais admirer un plafond orné et sculpté. Un lustre énorme surplombait nos têtes. 
-    J’avoue, je suis resté bouche-bée pendant un moment. Mais peut-être que quelques chiffres pourront vous aider à comprendre ce que j’ai pu ressentir : 
-    La mosquée peut accueillir jusqu’à 40 000 fidèles! Elle comprend 80 dômes et environ 1000 colonnes. Les lustres sont plaqués d’or et celui de la salle de prière principale fait 10 mètres de diamètre pour 15 mètres de haut. Waou, c’est juste énorme. Et ce fameux tapis sur lesquels je faisais timidement quelques pas n’est autre que le plus grand tapis tissé à la main au monde. 
-    Des bassins entourent la mosquée et scintillent au soleil comme le blanc et l’or qui couvre l’édifice. La nuit, ce dernier est illuminé par un système d’éclairage unique reflétant les phases de la lune.
-    Tout est à couper le souffle.
-    On reconnait bien là les Emiratis qui raffolent des records du monde en architecture. Je l’avais bien compris dès ma visite de Burj Khalifat (lien vers le lieu impressionnant d’EAU)
-    Pendant un moment, le temps s’est arrêté. Cette visite assure un moment magique, bercé de spiritualité.
+    Cette visite a profondément marqué mon voyage. Lorsque je me suis retrouvé face à cette immense mosquée, je me suis soudain senti minuscule. L’adhan (appel à la prière) résonnait du haut du minaret. Les nombreux fidèles rejoignaient d’un pas apaisé le bâtiment d’un blanc éclatant. Le parterre de dalle s'étendant entre moi et l'édifice luisait, reflétant le ciel où quelques nuages seulement glissaient sous la force du vent. Je plissais les yeux pour regarder le grand minaret, le soleil des Emirat m'aveuglant. Une sensation de quiétude me gagnait alors que je me joignais à la marche des croyants vers les grandes portes.<br>
+    A l’intérieur, je découvrais un espace immense. Le sol était couvert d’un splendide tapis iranien. En levant la tête, je pouvais admirer un plafond orné et sculpté. Un lustre énorme surplombait nos têtes. <br>
+    J’avoue, je suis resté bouche-bée pendant un moment. Mais peut-être que quelques chiffres pourront vous aider à comprendre ce que j’ai pu ressentir : <br>
+    La mosquée peut accueillir jusqu’à 40 000 fidèles! Elle comprend 80 dômes et environ 1000 colonnes. Les lustres sont plaqués d’or et celui de la salle de prière principale fait 10 mètres de diamètre pour 15 mètres de haut. Waou, c’est juste énorme. Et ce fameux tapis sur lesquels je faisais timidement quelques pas n’est autre que le plus grand tapis tissé à la main au monde. <br>
+    Des bassins entourent la mosquée et scintillent au soleil comme le blanc et l’or qui couvre l’édifice. La nuit, ce dernier est illuminé par un système d’éclairage unique reflétant les phases de la lune.<br>
+    Tout est à couper le souffle.<br>
+    On reconnait bien là les Emiratis qui raffolent des records du monde en architecture. Je l’avais bien compris dès <a href="panoramique.html">ma visite de Burj Khalifat</a>     Pendant un moment, le temps s’est arrêté. Cette visite assure un moment magique, bercé de spiritualité.<br>
 
         </div>
-        <img alt="foo" src="img/mais_ou_que_cetait.png" style="display:block; width:80%; margin:auto;">
+                        
+
+        <table style="width:100%;"><tr>
+            <td style="text-align:center;"><img src="img/macro1.png" style="width:100%; transform:translateX(50%);"></td>
+            <td style="text-align:center;">
+                <a href="javascript:void(0);">
+                    <img src="img/carre.png"  style="width:100%; position:relative; z-index:2;">
+                                    </a>
+            </td>
+            <td style="text-align:center;"><img src="img/macro2.png" style="width:100%; transform:translateX(-50%);"></td>
+        </tr></table>
+
     </div>
 </div>
 
@@ -300,10 +575,28 @@ function chemin_eteindre(n) {
 #article3 p, #article3 h1, #article3 h2, #article3 div {
     color:red;
 }
+#article3 article_texte {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+    -webkit-column-gap:   20px;
+       -moz-column-gap:   20px;
+            column-gap:   20px;
+ /* -webkit-column-rule:  1px solid lightblue; */
+ /*    -moz-column-rule:  1px solid lightblue; */
+ /*         column-rule:  1px solid lightblue; */
+}
+#article3 article_texte, #article3 article_texte * {
+    overflow:hidden;
+    line-height: 1.2;
+}
+#deplie_seulement3 {
+    display:none;
+}
 </style>
-<div class="article_splash_conteneur" id="article3">
+<div class="article_splash_conteneur">
     <div class="splash"  style="background-image:url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-413687.jpg'); background-size:cover;"></div>
-    <div class="article" style="background:white;">
+    <div class="article" id="article3" style="background:white;">
         <div class="article_entete">
             <div style="display:inline-block;"><h1>Jour ?</h1></div>
             <div style="float:right;">
@@ -311,22 +604,29 @@ function chemin_eteindre(n) {
                 <h2 style="display:inline-block; text-align:left; ">Abu<br>Dhabi</h2>
             </div>
         </div>
-        <div class="article_texte">
+        <div class="article_texte" id="article_texte3">
             
-    La grande Mosquée Cheikh Zayed - Abu Dhabi
-
-
-    Cette visite a profondément marqué mon voyage. Lorsque je me suis retrouvé face à cette immense mosquée, je me suis soudain senti minuscule. L’adhan (appel à la prière) résonnait du haut du minaret. Les nombreux fidèles rejoignaient d’un pas apaisé le bâtiment d’un blanc éclatant. Le parterre de dalle s'étendant entre moi et l'édifice luisait, reflétant le ciel où quelques nuages seulement glissaient sous la force du vent. Je plissais les yeux pour regarder le grand minaret, le soleil des Emirat m'aveuglant. Une sensation de quiétude me gagnait alors que je me joignais à la marche des croyants vers les grandes portes.
-    A l’intérieur, je découvrais un espace immense. Le sol était couvert d’un splendide tapis iranien. En levant la tête, je pouvais admirer un plafond orné et sculpté. Un lustre énorme surplombait nos têtes. 
-    J’avoue, je suis resté bouche-bée pendant un moment. Mais peut-être que quelques chiffres pourront vous aider à comprendre ce que j’ai pu ressentir : 
-    La mosquée peut accueillir jusqu’à 40 000 fidèles! Elle comprend 80 dômes et environ 1000 colonnes. Les lustres sont plaqués d’or et celui de la salle de prière principale fait 10 mètres de diamètre pour 15 mètres de haut. Waou, c’est juste énorme. Et ce fameux tapis sur lesquels je faisais timidement quelques pas n’est autre que le plus grand tapis tissé à la main au monde. 
-    Des bassins entourent la mosquée et scintillent au soleil comme le blanc et l’or qui couvre l’édifice. La nuit, ce dernier est illuminé par un système d’éclairage unique reflétant les phases de la lune.
-    Tout est à couper le souffle.
-    On reconnait bien là les Emiratis qui raffolent des records du monde en architecture. Je l’avais bien compris dès ma visite de Burj Khalifat (lien vers le lieu impressionnant d’EAU)
-    Pendant un moment, le temps s’est arrêté. Cette visite assure un moment magique, bercé de spiritualité.
+    Cette visite a profondément marqué mon voyage. Lorsque je me suis retrouvé face à cette immense mosquée, je me suis soudain senti minuscule. L’adhan (appel à la prière) résonnait du haut du minaret. Les nombreux fidèles rejoignaient d’un pas apaisé le bâtiment d’un blanc éclatant. Le parterre de dalle s'étendant entre moi et l'édifice luisait, reflétant le ciel où quelques nuages seulement glissaient sous la force du vent. Je plissais les yeux pour regarder le grand minaret, le soleil des Emirat m'aveuglant. Une sensation de quiétude me gagnait alors que je me joignais à la marche des croyants vers les grandes portes.<br>
+    A l’intérieur, je découvrais un espace immense. Le sol était couvert d’un splendide tapis iranien. En levant la tête, je pouvais admirer un plafond orné et sculpté. Un lustre énorme surplombait nos têtes. <br>
+    J’avoue, je suis resté bouche-bée pendant un moment. Mais peut-être que quelques chiffres pourront vous aider à comprendre ce que j’ai pu ressentir : <br>
+    La mosquée peut accueillir jusqu’à 40 000 fidèles! Elle comprend 80 dômes et environ 1000 colonnes. Les lustres sont plaqués d’or et celui de la salle de prière principale fait 10 mètres de diamètre pour 15 mètres de haut. Waou, c’est juste énorme. Et ce fameux tapis sur lesquels je faisais timidement quelques pas n’est autre que le plus grand tapis tissé à la main au monde. <br>
+    Des bassins entourent la mosquée et scintillent au soleil comme le blanc et l’or qui couvre l’édifice. La nuit, ce dernier est illuminé par un système d’éclairage unique reflétant les phases de la lune.<br>
+    Tout est à couper le souffle.<br>
+    On reconnait bien là les Emiratis qui raffolent des records du monde en architecture. Je l’avais bien compris dès <a href="panoramique.html">ma visite de Burj Khalifat</a>     Pendant un moment, le temps s’est arrêté. Cette visite assure un moment magique, bercé de spiritualité.<br>
 
         </div>
-        <img alt="foo" src="img/mais_ou_que_cetait.png" style="display:block; width:80%; margin:auto;">
+                        
+
+        <table style="width:100%;"><tr>
+            <td style="text-align:center;"><img src="img/macro1.png" style="width:100%; transform:translateX(50%);"></td>
+            <td style="text-align:center;">
+                <a href="javascript:void(0);">
+                    <img src="img/carre.png"  style="width:100%; position:relative; z-index:2;">
+                                    </a>
+            </td>
+            <td style="text-align:center;"><img src="img/macro2.png" style="width:100%; transform:translateX(-50%);"></td>
+        </tr></table>
+
     </div>
 </div>
 
@@ -335,10 +635,28 @@ function chemin_eteindre(n) {
 #article4 p, #article4 h1, #article4 h2, #article4 div {
     color:red;
 }
+#article4 article_texte {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+    -webkit-column-gap:   20px;
+       -moz-column-gap:   20px;
+            column-gap:   20px;
+ /* -webkit-column-rule:  1px solid lightblue; */
+ /*    -moz-column-rule:  1px solid lightblue; */
+ /*         column-rule:  1px solid lightblue; */
+}
+#article4 article_texte, #article4 article_texte * {
+    overflow:hidden;
+    line-height: 1.2;
+}
+#deplie_seulement4 {
+    display:none;
+}
 </style>
-<div class="article_splash_conteneur" id="article4">
+<div class="article_splash_conteneur">
     <div class="splash"  style="background-image:url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-413687.jpg'); background-size:cover;"></div>
-    <div class="article" style="background:white;">
+    <div class="article" id="article4" style="background:white;">
         <div class="article_entete">
             <div style="display:inline-block;"><h1>Jour ?</h1></div>
             <div style="float:right;">
@@ -346,67 +664,111 @@ function chemin_eteindre(n) {
                 <h2 style="display:inline-block; text-align:left; ">Abu<br>Dhabi</h2>
             </div>
         </div>
-        <div class="article_texte">
+        <div class="article_texte" id="article_texte4">
             
-    La grande Mosquée Cheikh Zayed - Abu Dhabi
-
-
-    Cette visite a profondément marqué mon voyage. Lorsque je me suis retrouvé face à cette immense mosquée, je me suis soudain senti minuscule. L’adhan (appel à la prière) résonnait du haut du minaret. Les nombreux fidèles rejoignaient d’un pas apaisé le bâtiment d’un blanc éclatant. Le parterre de dalle s'étendant entre moi et l'édifice luisait, reflétant le ciel où quelques nuages seulement glissaient sous la force du vent. Je plissais les yeux pour regarder le grand minaret, le soleil des Emirat m'aveuglant. Une sensation de quiétude me gagnait alors que je me joignais à la marche des croyants vers les grandes portes.
-    A l’intérieur, je découvrais un espace immense. Le sol était couvert d’un splendide tapis iranien. En levant la tête, je pouvais admirer un plafond orné et sculpté. Un lustre énorme surplombait nos têtes. 
-    J’avoue, je suis resté bouche-bée pendant un moment. Mais peut-être que quelques chiffres pourront vous aider à comprendre ce que j’ai pu ressentir : 
-    La mosquée peut accueillir jusqu’à 40 000 fidèles! Elle comprend 80 dômes et environ 1000 colonnes. Les lustres sont plaqués d’or et celui de la salle de prière principale fait 10 mètres de diamètre pour 15 mètres de haut. Waou, c’est juste énorme. Et ce fameux tapis sur lesquels je faisais timidement quelques pas n’est autre que le plus grand tapis tissé à la main au monde. 
-    Des bassins entourent la mosquée et scintillent au soleil comme le blanc et l’or qui couvre l’édifice. La nuit, ce dernier est illuminé par un système d’éclairage unique reflétant les phases de la lune.
-    Tout est à couper le souffle.
-    On reconnait bien là les Emiratis qui raffolent des records du monde en architecture. Je l’avais bien compris dès ma visite de Burj Khalifat (lien vers le lieu impressionnant d’EAU)
-    Pendant un moment, le temps s’est arrêté. Cette visite assure un moment magique, bercé de spiritualité.
+    Cette visite a profondément marqué mon voyage. Lorsque je me suis retrouvé face à cette immense mosquée, je me suis soudain senti minuscule. L’adhan (appel à la prière) résonnait du haut du minaret. Les nombreux fidèles rejoignaient d’un pas apaisé le bâtiment d’un blanc éclatant. Le parterre de dalle s'étendant entre moi et l'édifice luisait, reflétant le ciel où quelques nuages seulement glissaient sous la force du vent. Je plissais les yeux pour regarder le grand minaret, le soleil des Emirat m'aveuglant. Une sensation de quiétude me gagnait alors que je me joignais à la marche des croyants vers les grandes portes.<br>
+    A l’intérieur, je découvrais un espace immense. Le sol était couvert d’un splendide tapis iranien. En levant la tête, je pouvais admirer un plafond orné et sculpté. Un lustre énorme surplombait nos têtes. <br>
+    J’avoue, je suis resté bouche-bée pendant un moment. Mais peut-être que quelques chiffres pourront vous aider à comprendre ce que j’ai pu ressentir : <br>
+    La mosquée peut accueillir jusqu’à 40 000 fidèles! Elle comprend 80 dômes et environ 1000 colonnes. Les lustres sont plaqués d’or et celui de la salle de prière principale fait 10 mètres de diamètre pour 15 mètres de haut. Waou, c’est juste énorme. Et ce fameux tapis sur lesquels je faisais timidement quelques pas n’est autre que le plus grand tapis tissé à la main au monde. <br>
+    Des bassins entourent la mosquée et scintillent au soleil comme le blanc et l’or qui couvre l’édifice. La nuit, ce dernier est illuminé par un système d’éclairage unique reflétant les phases de la lune.<br>
+    Tout est à couper le souffle.<br>
+    On reconnait bien là les Emiratis qui raffolent des records du monde en architecture. Je l’avais bien compris dès <a href="panoramique.html">ma visite de Burj Khalifat</a>     Pendant un moment, le temps s’est arrêté. Cette visite assure un moment magique, bercé de spiritualité.<br>
 
         </div>
-        <img alt="foo" src="img/mais_ou_que_cetait.png" style="display:block; width:80%; margin:auto;">
+                        
+
+        <table style="width:100%;"><tr>
+            <td style="text-align:center;"><img src="img/macro1.png" style="width:100%; transform:translateX(50%);"></td>
+            <td style="text-align:center;">
+                <a href="javascript:void(0);">
+                    <img src="img/carre.png"  style="width:100%; position:relative; z-index:2;">
+                                    </a>
+            </td>
+            <td style="text-align:center;"><img src="img/macro2.png" style="width:100%; transform:translateX(-50%);"></td>
+        </tr></table>
+
     </div>
 </div>
 
 
     
-<div style="background:#111111; heigth:100px;">
-    <div id="gallerie" class="gallerie" style="background:#444444;">
+<div class="gallerie_conteneur" style="background:#111111;">
+    <div id="gallerie" class="gallerie" style="background:black;">
         
-        
-    <div class="vignette" style="height:250px;"></div>
 
-        
-    <div class="vignette" style="height:132px;"></div>
-
-        
-    <div class="vignette" style="height:301px;"></div>
-
-        
-    <div class="vignette" style="height:150px;"></div>
-
-        
-    <div class="vignette" style="height:145px;"></div>
-
-        
-    <div class="vignette" style="height:103px;"></div>
-
-        
-    <div class="vignette" style="height:126px;"></div>
-
-        
-    <div class="vignette" style="height:188px;"></div>
-
-        
-    <div class="vignette" style="height:250px;"></div>
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/eglises/79048c7684ae858eb0f6ef2a89320701.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/eglises/iran_church.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/eglises/liban_church.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/eglises/Syrie_church.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/17393456425_3f811805af_k.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/1f5f8b139e399d0d04b3679e4781ed9c.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/34ca4ecc1bd042290e5fa284526cd449.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/3f6b07023f2238b65e4103a1d9536795.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/6059feabc386f2350732c24a60d85a97.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/AL-SOLTAN-QALAWOON-LE-CAIRE-EGYPTE.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/blue_mosquee_istanbul_turky.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/BPqKCh.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/dab72dc2a8fdebbc615a9c1f51935437.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/f1b085fc11123784e153c85a25a6083c.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/f297f2bfbbb7d9730a21ce30c243cae0.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/FATIMA-MASUMEH-SHRINE-QOM-IRAN.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/JALIL-KHAYAT-ARBIL-IRAK.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/maroc.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/Sayyidah Zaynab Mosque_Damascus_Syria.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/SHAH-ISFAHAN-IRAN-1.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/SHIRAZ-IRAN.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/tumblr_n4hxl6qsUo1txobqgo1_500.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/tumblr_nfefs7pksV1u14xjuo1_500.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/tumblr_npokfuNQ1R1u14xjuo1_500.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/tumblr_ny8hse7I991qmz328o5_1280.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/tumblr_ny8hse7I991qmz328o6_500.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/tumblr_ny8hse7I991qmz328o7_500.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/tumblr_ny8hse7I991qmz328o8_1280.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/spirituel/mosquées/VAKIL-SHIRAZ-IRAN.jpg">
 
     
     </div>
 </div>
 
 
+    <div id="carte_footer" style="width:100%; height:80%;"></div>
+    <script>
+    $(function(){
+        map_carte_footer = new google.maps.Map(document.getElementById('carte_footer'), {
+            center: new google.maps.LatLng(24.4125412, 54.475140099999976),
+            zoom: 4,
+            panControl: false,
+            zoomControl: false,
+            mapTypeControl: false,
+            streetViewControl: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            scrollwheel: false,
+            styles: map_style
+        });
+    });
+    </script>
+
+    <script>
+    $(function(){
+        marker_carte_footer = new google.maps.Marker({
+            position: new google.maps.LatLng(24.4125412, 54.475140099999976),
+            map: map_carte_footer,
+            visible: true,
+            icon: "img/map_marker.png"
+        });
+    });
+    </script>
+
+
+
     
-<footer class="footer_non_collant">
+<style>
+#footer_hack   { background-color:white; }
+#footer_hack * { color:black; }
+</style>
+<footer class="footer_non_collant" id="footer_hack">
     <div style="height:10px;"></div>
-    <a href="javascript:alert('Plus tard :|');"><div style="background-color:#555555; height:32px; text-align:center;">Et sur une carte ?</div></a>
-    
+        
 <nav>
     <a href="mon_voyage.html">MON VOYAGE</a>
     <a href="contact.html">CONTACT</a>

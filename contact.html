@@ -52,6 +52,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <meta charset="utf-8">
 <!-- 
     CE FICHIER A ETE GENERE AUTOMATIQUEMENT VIA M4. 
@@ -65,6 +81,215 @@
             crossorigin="anonymous">
     </script>
     <script src="js/script.js"      type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVtUXJ1AiE49ZmTGwn0GKA00hQwnHdl58"></script>
+
+<script>
+	map_style = [
+    {
+        "featureType": "all",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#4b480f"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "gamma": 0.01
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "saturation": -31
+            },
+            {
+                "lightness": -33
+            },
+            {
+                "weight": 2
+            },
+            {
+                "gamma": 0.8
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#f4f0e2"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#191935"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 30
+            },
+            {
+                "saturation": 30
+            },
+            {
+                "color": "#191935"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "saturation": 20
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 20
+            },
+            {
+                "saturation": -20
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#191935"
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 10
+            },
+            {
+                "saturation": -30
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "saturation": 25
+            },
+            {
+                "lightness": 25
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#191935"
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "lightness": "-26"
+            },
+            {
+                "saturation": "100"
+            },
+            {
+                "color": "#ffffff"
+            }
+        ]
+    }
+];
+</script>
+
+
+
+
+
     <link  href="img/favicon.png"   rel="icon"       type="image/png">
     <link  href="css/polices.css"   rel="stylesheet" type="text/css">
     <link  href="css/defaut.css"    rel="stylesheet" type="text/css">
@@ -92,37 +317,57 @@
     </div>
 
 <style>
-.blacktxt { color:black; }
+.blacktxt, .blacktxt * { color:black; }
 .blackbg { background-color:black; color:white; }
 .whitebg { background-color:white; color:black; }
 .border0 {border:0;}
 .w100 {width:100%;}
-.msg {height:150px; max-height:150px; resize:none; }
+.msg {height:110px; max-height:110px; resize:none; margin-top:10px; }
 .centered { width:100%; text-align:center; }
-.tx1 { font-family:Bebas, sans-serif; font-size:32px; }
+.tx1 { font-family:Bebas, sans-serif; font-size:20px; }
 .tx2 { }
+#contactfond {
+    background-image: url("img/contact.png"), url("img/contact_bande.png");
+    background-size: auto 460px, auto 460px;
+    background-repeat: no-repeat, repeat-x;
+    background-position: 50% 70%, 0 70%;
+    z-index:3;
+}
+#contactconteneur {
+    width: 320px;
+    height: 320px;
+    position: fixed;
+    top: calc(70% - 250px);
+    left: calc(50% - 160px);
+}
+.envoyer {
+    height:29px;
+    margin-top:50px;
+    transform:translateY(-25px);
+}
 </style>
 
-    <div class="poster" id="poster0" style="background-image:url('http://yoanlecoq.com/dl/oy/img_contact.jpg');">
-        <div class="poster_fond">
-            <div class="poster_logo_conteneur">
-                <table>
+    <div class="poster" id="poster0" style="background-image:url('http://yoanlecoq.com/dl/oy/img_contact.jpg'); background-color:white; background-position: 0 -100px; background-repeat:no-repeat;">
+        <div class="poster_fond" id="contactfond">
+            <div class="poster_logo_conteneur" id="contactconteneur">
+                <table style="width:80%; height:100%;">
                     <tr><td class="w100 centered">
                         <p class="tx1 blacktxt">CONTACT</p>
                         <p class="tx2 blacktxt">Partagez vos ressentis avec nous</p>
                     </td></tr>
                     <tr><td class="w100 centered" style="">
                         <form action="">
-                            <input    class="w100 border0 blackbg" name="email" type="text" placeholder="Email"><br><br>
-                            <textarea class="w100 border0 blackbg msg" name="msg" rows="4" cols="50">Bonjour !</textarea>
-                            <input    class="w100 border0 whitebg" type="submit" value="Submit">
+                            <input    class="w100 border0 blackbg" name="email" type="text" placeholder="Email"><br>
+                            <textarea class="w100 border0 blackbg msg" name="msg" rows="4" cols="40">Votre message</textarea><br>
+                            <input    class="w100 border0 whitebg envoyer" type="submit" value="Envoyer">
                         </form>
                     </td></tr>
                 </table>
             </div>
         </div>
     </div>
-    <footer class="footer_collant">
+    <footer class="footer_collant whitebg blacktxt" style="height:30%;">
+        <span class="footer_collant"> <!-- hack -->
         
 <nav>
     <a href="mon_voyage.html">MON VOYAGE</a>
@@ -131,6 +376,7 @@
     <a href="qui_sommes_nous.html">QUI SOMMES-NOUS</a>
 </nav>
 
+        </span>
     </footer>
 </body>
 </html>

@@ -52,6 +52,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <meta charset="utf-8">
 <!-- 
     CE FICHIER A ETE GENERE AUTOMATIQUEMENT VIA M4. 
@@ -65,6 +81,215 @@
             crossorigin="anonymous">
     </script>
     <script src="js/script.js"      type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVtUXJ1AiE49ZmTGwn0GKA00hQwnHdl58"></script>
+
+<script>
+	map_style = [
+    {
+        "featureType": "all",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#4b480f"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "gamma": 0.01
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "saturation": -31
+            },
+            {
+                "lightness": -33
+            },
+            {
+                "weight": 2
+            },
+            {
+                "gamma": 0.8
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#f4f0e2"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#191935"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 30
+            },
+            {
+                "saturation": 30
+            },
+            {
+                "color": "#191935"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "saturation": 20
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 20
+            },
+            {
+                "saturation": -20
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#191935"
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 10
+            },
+            {
+                "saturation": -30
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "saturation": 25
+            },
+            {
+                "lightness": 25
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#191935"
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "lightness": "-26"
+            },
+            {
+                "saturation": "100"
+            },
+            {
+                "color": "#ffffff"
+            }
+        ]
+    }
+];
+</script>
+
+
+
+
+
     <link  href="img/favicon.png"   rel="icon"       type="image/png">
     <link  href="css/polices.css"   rel="stylesheet" type="text/css">
     <link  href="css/defaut.css"    rel="stylesheet" type="text/css">
@@ -230,10 +455,28 @@ function chemin_eteindre(n) {
 #article1 p, #article1 h1, #article1 h2, #article1 div {
     color:black;
 }
+#article1 article_texte {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+    -webkit-column-gap:   20px;
+       -moz-column-gap:   20px;
+            column-gap:   20px;
+ /* -webkit-column-rule:  1px solid lightblue; */
+ /*    -moz-column-rule:  1px solid lightblue; */
+ /*         column-rule:  1px solid lightblue; */
+}
+#article1 article_texte, #article1 article_texte * {
+    overflow:hidden;
+    line-height: 1.2;
+}
+#deplie_seulement1 {
+    display:none;
+}
 </style>
-<div class="article_splash_conteneur" id="article1">
-    <div class="splash"  style="background-image:url('http://www.teheran.ir/local/cache-vignettes/L500xH332/1521-7-112aa.jpg?1366980618'); background-size:cover;"></div>
-    <div class="article" style="background:white;">
+<div class="article_splash_conteneur">
+    <div class="splash"  style="background-image:url('img/meybod_craftsman.jpg'); background-size:cover;"></div>
+    <div class="article" id="article1" style="background:white;">
         <div class="article_entete">
             <div style="display:inline-block;"><h1>Jour ?</h1></div>
             <div style="float:right;">
@@ -241,19 +484,30 @@ function chemin_eteindre(n) {
                 <h2 style="display:inline-block; text-align:left; ">Iran</h2>
             </div>
         </div>
-        <div class="article_texte">
+        <div class="article_texte" id="article_texte1">
             
-    Durant mon voyage, je me suis osé à parcourir le désert à mainte reprise. Mon parcours en iran m’a donné une nouvelle occasion d’affronter l’air chaud et sec du désert mais aussi son silence nostalgique si apaisant, loin du bruit des grandes villes.
-    Dans l’étendu de la plaine aride du plateau iranien se faisait pourtant écho le bruit d’une ville : Meybod. J’y découvrais une ville ancienne. Rapidement, certains éléments attirèrent mon attention : les poteries et les faïences d’une étonnante authenticité.
+    Durant mon voyage, je me suis osé à parcourir le désert à mainte reprise. Mon parcours en Iran m’a donné une nouvelle occasion d’affronter l’air chaud et sec du désert mais aussi son silence nostalgique si apaisant, loin du bruit des grandes villes.<br>
+    Dans l’étendu de la plaine aride du plateau iranien se faisait pourtant écho le bruit d’une ville : Meybod. J’y découvrais une ville ancienne. Rapidement, certains éléments attirèrent mon attention : les poteries et les faïences d’une étonnante authenticité.<br>
+<br>
 
-
-    Je remarquais un petit atelier ouvert sur la rue. Quelques poteries étaient aligné le long du mur. Je remarquais un homme, près de la porte ouverte. Il était assis à l’ombre, cherchant la fraîcheur. D’un main experte, il modelait l’argile. Remarquant mon intérêt pour son travail, il m’adressa un sourire fier et m’invita à m’assoir sur un petit tabouret de fortune. Tout en continuant de modeler la terre, il m’expliqua avec fierté son art. Il était maître potier, détenteur d’un savoir ancestral. Autrefois, les potiers formaient une hiérarchie distinguée dans la société de Meybod. Leur travail répondait aux besoin des habitants. Ils créent les objets et les récipients de la vie quotidienne.
-    Ces objets étaient souvent décoré de motifs, parfois mystérieux et riche d’expression. Sur les poteries près de nous, je remarquais que le motif de l’oiseaux revenait souvent.  En effet la nature est source d’inspiration dans l’art persan. C’est un motif revenant très régulièrement dans l’art iranien. Sa valeur symbolique remonte à l’air préislamique : il a une valeur de talisman. Il protègerait par exemple la maison.
-    Un autre motif ressortait parmi les décorations : le poisson. Il est un autre symbole important. C’est un porte bonheur, un symbole de vie et d’abondance. 
-    Ces motif sont omniprésent dans la poterie meybodienne et représente bien la culture de cette ville, une culture riche que j’ai pu découvrir le temps d’un journée.
+    Je remarquais un petit atelier ouvert sur la rue. Quelques poteries étaient alignées le long du mur. Je remarquais un homme, près de la porte ouverte. Il était assis à l’ombre, cherchant la fraîcheur. D’un main experte, il modelait l’argile. Remarquant mon intérêt pour son travail, il m’adressa un sourire fier et m’invita à m’assoir sur un petit tabouret de fortune. Tout en continuant de modeler la terre, il m’expliqua avec fierté son art. Il était maître potier, détenteur d’un savoir ancestral. Autrefois, les potiers formaient une hiérarchie distinguée dans la société de Meybod. Leur travail répondait aux besoin des habitants. Ils créent les objets et les récipients de la vie quotidienne.<br>
+    Ces objets étaient souvent décorés de motifs, parfois mystérieux et riches d’expressions. Sur les poteries près de nous, je remarquais que le motif de l’oiseau revenait souvent.  En effet, la nature est source d’inspiration dans l’art persan. C’est un motif revenant très régulièrement dans l’art iranien. Sa valeur symbolique remonte à l’air préislamique : il a une valeur de talisman. Il protègerait par exemple la maison.<br>
+    Un autre motif ressortait parmi les décorations : le poisson. Il est un autre symbole important. C’est un porte bonheur, un symbole de vie et d’abondance. <br>
+    Ces motif sont omniprésents dans la poterie meybodienne et représentent bien la culture de cette ville, une culture riche que j’ai pu découvrir le temps d’un journée.<br>
 
         </div>
-        <img alt="foo" src="img/mais_ou_que_cetait.png" style="display:block; width:80%; margin:auto;">
+                        
+
+        <table style="width:100%;"><tr>
+            <td style="text-align:center;"><img src="img/macro1.png" style="width:100%; transform:translateX(50%);"></td>
+            <td style="text-align:center;">
+                <a href="javascript:void(0);">
+                    <img src="img/carre.png"  style="width:100%; position:relative; z-index:2;">
+                                    </a>
+            </td>
+            <td style="text-align:center;"><img src="img/macro2.png" style="width:100%; transform:translateX(-50%);"></td>
+        </tr></table>
+
     </div>
 </div>
 
@@ -262,10 +516,28 @@ function chemin_eteindre(n) {
 #article2 p, #article2 h1, #article2 h2, #article2 div {
     color:red;
 }
+#article2 article_texte {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+    -webkit-column-gap:   20px;
+       -moz-column-gap:   20px;
+            column-gap:   20px;
+ /* -webkit-column-rule:  1px solid lightblue; */
+ /*    -moz-column-rule:  1px solid lightblue; */
+ /*         column-rule:  1px solid lightblue; */
+}
+#article2 article_texte, #article2 article_texte * {
+    overflow:hidden;
+    line-height: 1.2;
+}
+#deplie_seulement2 {
+    display:none;
+}
 </style>
-<div class="article_splash_conteneur" id="article2">
-    <div class="splash"  style="background-image:url('http://www.teheran.ir/local/cache-vignettes/L500xH332/1521-7-112aa.jpg?1366980618'); background-size:cover;"></div>
-    <div class="article" style="background:white;">
+<div class="article_splash_conteneur">
+    <div class="splash"  style="background-image:url('img/meybod_craftsman.jpg'); background-size:cover;"></div>
+    <div class="article" id="article2" style="background:white;">
         <div class="article_entete">
             <div style="display:inline-block;"><h1>Jour ?</h1></div>
             <div style="float:right;">
@@ -273,19 +545,30 @@ function chemin_eteindre(n) {
                 <h2 style="display:inline-block; text-align:left; ">Iran</h2>
             </div>
         </div>
-        <div class="article_texte">
+        <div class="article_texte" id="article_texte2">
             
-    Durant mon voyage, je me suis osé à parcourir le désert à mainte reprise. Mon parcours en iran m’a donné une nouvelle occasion d’affronter l’air chaud et sec du désert mais aussi son silence nostalgique si apaisant, loin du bruit des grandes villes.
-    Dans l’étendu de la plaine aride du plateau iranien se faisait pourtant écho le bruit d’une ville : Meybod. J’y découvrais une ville ancienne. Rapidement, certains éléments attirèrent mon attention : les poteries et les faïences d’une étonnante authenticité.
+    Durant mon voyage, je me suis osé à parcourir le désert à mainte reprise. Mon parcours en Iran m’a donné une nouvelle occasion d’affronter l’air chaud et sec du désert mais aussi son silence nostalgique si apaisant, loin du bruit des grandes villes.<br>
+    Dans l’étendu de la plaine aride du plateau iranien se faisait pourtant écho le bruit d’une ville : Meybod. J’y découvrais une ville ancienne. Rapidement, certains éléments attirèrent mon attention : les poteries et les faïences d’une étonnante authenticité.<br>
+<br>
 
-
-    Je remarquais un petit atelier ouvert sur la rue. Quelques poteries étaient aligné le long du mur. Je remarquais un homme, près de la porte ouverte. Il était assis à l’ombre, cherchant la fraîcheur. D’un main experte, il modelait l’argile. Remarquant mon intérêt pour son travail, il m’adressa un sourire fier et m’invita à m’assoir sur un petit tabouret de fortune. Tout en continuant de modeler la terre, il m’expliqua avec fierté son art. Il était maître potier, détenteur d’un savoir ancestral. Autrefois, les potiers formaient une hiérarchie distinguée dans la société de Meybod. Leur travail répondait aux besoin des habitants. Ils créent les objets et les récipients de la vie quotidienne.
-    Ces objets étaient souvent décoré de motifs, parfois mystérieux et riche d’expression. Sur les poteries près de nous, je remarquais que le motif de l’oiseaux revenait souvent.  En effet la nature est source d’inspiration dans l’art persan. C’est un motif revenant très régulièrement dans l’art iranien. Sa valeur symbolique remonte à l’air préislamique : il a une valeur de talisman. Il protègerait par exemple la maison.
-    Un autre motif ressortait parmi les décorations : le poisson. Il est un autre symbole important. C’est un porte bonheur, un symbole de vie et d’abondance. 
-    Ces motif sont omniprésent dans la poterie meybodienne et représente bien la culture de cette ville, une culture riche que j’ai pu découvrir le temps d’un journée.
+    Je remarquais un petit atelier ouvert sur la rue. Quelques poteries étaient alignées le long du mur. Je remarquais un homme, près de la porte ouverte. Il était assis à l’ombre, cherchant la fraîcheur. D’un main experte, il modelait l’argile. Remarquant mon intérêt pour son travail, il m’adressa un sourire fier et m’invita à m’assoir sur un petit tabouret de fortune. Tout en continuant de modeler la terre, il m’expliqua avec fierté son art. Il était maître potier, détenteur d’un savoir ancestral. Autrefois, les potiers formaient une hiérarchie distinguée dans la société de Meybod. Leur travail répondait aux besoin des habitants. Ils créent les objets et les récipients de la vie quotidienne.<br>
+    Ces objets étaient souvent décorés de motifs, parfois mystérieux et riches d’expressions. Sur les poteries près de nous, je remarquais que le motif de l’oiseau revenait souvent.  En effet, la nature est source d’inspiration dans l’art persan. C’est un motif revenant très régulièrement dans l’art iranien. Sa valeur symbolique remonte à l’air préislamique : il a une valeur de talisman. Il protègerait par exemple la maison.<br>
+    Un autre motif ressortait parmi les décorations : le poisson. Il est un autre symbole important. C’est un porte bonheur, un symbole de vie et d’abondance. <br>
+    Ces motif sont omniprésents dans la poterie meybodienne et représentent bien la culture de cette ville, une culture riche que j’ai pu découvrir le temps d’un journée.<br>
 
         </div>
-        <img alt="foo" src="img/mais_ou_que_cetait.png" style="display:block; width:80%; margin:auto;">
+                        
+
+        <table style="width:100%;"><tr>
+            <td style="text-align:center;"><img src="img/macro1.png" style="width:100%; transform:translateX(50%);"></td>
+            <td style="text-align:center;">
+                <a href="javascript:void(0);">
+                    <img src="img/carre.png"  style="width:100%; position:relative; z-index:2;">
+                                    </a>
+            </td>
+            <td style="text-align:center;"><img src="img/macro2.png" style="width:100%; transform:translateX(-50%);"></td>
+        </tr></table>
+
     </div>
 </div>
 
@@ -294,10 +577,28 @@ function chemin_eteindre(n) {
 #article3 p, #article3 h1, #article3 h2, #article3 div {
     color:red;
 }
+#article3 article_texte {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+    -webkit-column-gap:   20px;
+       -moz-column-gap:   20px;
+            column-gap:   20px;
+ /* -webkit-column-rule:  1px solid lightblue; */
+ /*    -moz-column-rule:  1px solid lightblue; */
+ /*         column-rule:  1px solid lightblue; */
+}
+#article3 article_texte, #article3 article_texte * {
+    overflow:hidden;
+    line-height: 1.2;
+}
+#deplie_seulement3 {
+    display:none;
+}
 </style>
-<div class="article_splash_conteneur" id="article3">
-    <div class="splash"  style="background-image:url('http://www.teheran.ir/local/cache-vignettes/L500xH332/1521-7-112aa.jpg?1366980618'); background-size:cover;"></div>
-    <div class="article" style="background:white;">
+<div class="article_splash_conteneur">
+    <div class="splash"  style="background-image:url('img/meybod_craftsman.jpg'); background-size:cover;"></div>
+    <div class="article" id="article3" style="background:white;">
         <div class="article_entete">
             <div style="display:inline-block;"><h1>Jour ?</h1></div>
             <div style="float:right;">
@@ -305,64 +606,94 @@ function chemin_eteindre(n) {
                 <h2 style="display:inline-block; text-align:left; ">Iran</h2>
             </div>
         </div>
-        <div class="article_texte">
+        <div class="article_texte" id="article_texte3">
             
-    Durant mon voyage, je me suis osé à parcourir le désert à mainte reprise. Mon parcours en iran m’a donné une nouvelle occasion d’affronter l’air chaud et sec du désert mais aussi son silence nostalgique si apaisant, loin du bruit des grandes villes.
-    Dans l’étendu de la plaine aride du plateau iranien se faisait pourtant écho le bruit d’une ville : Meybod. J’y découvrais une ville ancienne. Rapidement, certains éléments attirèrent mon attention : les poteries et les faïences d’une étonnante authenticité.
+    Durant mon voyage, je me suis osé à parcourir le désert à mainte reprise. Mon parcours en Iran m’a donné une nouvelle occasion d’affronter l’air chaud et sec du désert mais aussi son silence nostalgique si apaisant, loin du bruit des grandes villes.<br>
+    Dans l’étendu de la plaine aride du plateau iranien se faisait pourtant écho le bruit d’une ville : Meybod. J’y découvrais une ville ancienne. Rapidement, certains éléments attirèrent mon attention : les poteries et les faïences d’une étonnante authenticité.<br>
+<br>
 
-
-    Je remarquais un petit atelier ouvert sur la rue. Quelques poteries étaient aligné le long du mur. Je remarquais un homme, près de la porte ouverte. Il était assis à l’ombre, cherchant la fraîcheur. D’un main experte, il modelait l’argile. Remarquant mon intérêt pour son travail, il m’adressa un sourire fier et m’invita à m’assoir sur un petit tabouret de fortune. Tout en continuant de modeler la terre, il m’expliqua avec fierté son art. Il était maître potier, détenteur d’un savoir ancestral. Autrefois, les potiers formaient une hiérarchie distinguée dans la société de Meybod. Leur travail répondait aux besoin des habitants. Ils créent les objets et les récipients de la vie quotidienne.
-    Ces objets étaient souvent décoré de motifs, parfois mystérieux et riche d’expression. Sur les poteries près de nous, je remarquais que le motif de l’oiseaux revenait souvent.  En effet la nature est source d’inspiration dans l’art persan. C’est un motif revenant très régulièrement dans l’art iranien. Sa valeur symbolique remonte à l’air préislamique : il a une valeur de talisman. Il protègerait par exemple la maison.
-    Un autre motif ressortait parmi les décorations : le poisson. Il est un autre symbole important. C’est un porte bonheur, un symbole de vie et d’abondance. 
-    Ces motif sont omniprésent dans la poterie meybodienne et représente bien la culture de cette ville, une culture riche que j’ai pu découvrir le temps d’un journée.
+    Je remarquais un petit atelier ouvert sur la rue. Quelques poteries étaient alignées le long du mur. Je remarquais un homme, près de la porte ouverte. Il était assis à l’ombre, cherchant la fraîcheur. D’un main experte, il modelait l’argile. Remarquant mon intérêt pour son travail, il m’adressa un sourire fier et m’invita à m’assoir sur un petit tabouret de fortune. Tout en continuant de modeler la terre, il m’expliqua avec fierté son art. Il était maître potier, détenteur d’un savoir ancestral. Autrefois, les potiers formaient une hiérarchie distinguée dans la société de Meybod. Leur travail répondait aux besoin des habitants. Ils créent les objets et les récipients de la vie quotidienne.<br>
+    Ces objets étaient souvent décorés de motifs, parfois mystérieux et riches d’expressions. Sur les poteries près de nous, je remarquais que le motif de l’oiseau revenait souvent.  En effet, la nature est source d’inspiration dans l’art persan. C’est un motif revenant très régulièrement dans l’art iranien. Sa valeur symbolique remonte à l’air préislamique : il a une valeur de talisman. Il protègerait par exemple la maison.<br>
+    Un autre motif ressortait parmi les décorations : le poisson. Il est un autre symbole important. C’est un porte bonheur, un symbole de vie et d’abondance. <br>
+    Ces motif sont omniprésents dans la poterie meybodienne et représentent bien la culture de cette ville, une culture riche que j’ai pu découvrir le temps d’un journée.<br>
 
         </div>
-        <img alt="foo" src="img/mais_ou_que_cetait.png" style="display:block; width:80%; margin:auto;">
+                        
+
+        <table style="width:100%;"><tr>
+            <td style="text-align:center;"><img src="img/macro1.png" style="width:100%; transform:translateX(50%);"></td>
+            <td style="text-align:center;">
+                <a href="javascript:void(0);">
+                    <img src="img/carre.png"  style="width:100%; position:relative; z-index:2;">
+                                    </a>
+            </td>
+            <td style="text-align:center;"><img src="img/macro2.png" style="width:100%; transform:translateX(-50%);"></td>
+        </tr></table>
+
     </div>
 </div>
 
 
     
-<div style="background:#111111; heigth:100px;">
-    <div id="gallerie" class="gallerie" style="background:#444444;">
+<div class="gallerie_conteneur" style="background:#111111;">
+    <div id="gallerie" class="gallerie" style="background:black;">
         
-        
-    <div class="vignette" style="height:250px;"></div>
-
-        
-    <div class="vignette" style="height:301px;"></div>
-
-        
-    <div class="vignette" style="height:150px;"></div>
-
-        
-    <div class="vignette" style="height:188px;"></div>
-
-        
-    <div class="vignette" style="height:132px;"></div>
-
-        
-    <div class="vignette" style="height:103px;"></div>
-
-        
-    <div class="vignette" style="height:126px;"></div>
-
-        
-    <div class="vignette" style="height:250px;"></div>
-
-        
-    <div class="vignette" style="height:145px;"></div>
-
+<img style="width:100%;" alt="..." src="img/galleries/artisanal/15-Tourisme-maroc.JPG">
+<img style="width:100%;" alt="..." src="img/galleries/artisanal/4451435736_32b1683a57.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/artisanal/arab_ishk_16_by_larage4peace.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/artisanal/artisanat-tunisie-expomilan.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/artisanal/assiette-creuse-zelliges.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/artisanal/fes_souk_tanneurs.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/artisanal/img_3760.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/artisanal/Maroc peint assiette vue Manu.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/artisanal/Maroc tagines séchage vue Manu.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/artisanal/ottoman_lamps_by_kuturaki-d37zvu4.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/artisanal/reading-lamp-leather-Moroccan.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/artisanal/souk3.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/artisanal/souk5-667x1000.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/artisanal/tajagrocarpet.jpg">
     
     </div>
 </div>
 
 
+    <div id="carte_footer" style="width:100%; height:80%;"></div>
+    <script>
+    $(function(){
+        map_carte_footer = new google.maps.Map(document.getElementById('carte_footer'), {
+            center: new google.maps.LatLng(32.2487226, 54.00793410000006),
+            zoom: 4,
+            panControl: false,
+            zoomControl: false,
+            mapTypeControl: false,
+            streetViewControl: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            scrollwheel: false,
+            styles: map_style
+        });
+    });
+    </script>
+
+    <script>
+    $(function(){
+        marker_carte_footer = new google.maps.Marker({
+            position: new google.maps.LatLng(32.2487226, 54.00793410000006),
+            map: map_carte_footer,
+            visible: true,
+            icon: "img/map_marker.png"
+        });
+    });
+    </script>
+
+
     
-<footer class="footer_non_collant">
+<style>
+#footer_hack   { background-color:white; }
+#footer_hack * { color:black; }
+</style>
+<footer class="footer_non_collant" id="footer_hack">
     <div style="height:10px;"></div>
-    <a href="javascript:alert('Plus tard :|');"><div style="background-color:#555555; height:32px; text-align:center;">Et sur une carte ?</div></a>
-    
+        
 <nav>
     <a href="mon_voyage.html">MON VOYAGE</a>
     <a href="contact.html">CONTACT</a>

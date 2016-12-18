@@ -52,6 +52,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <meta charset="utf-8">
 <!-- 
     CE FICHIER A ETE GENERE AUTOMATIQUEMENT VIA M4. 
@@ -65,6 +81,215 @@
             crossorigin="anonymous">
     </script>
     <script src="js/script.js"      type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVtUXJ1AiE49ZmTGwn0GKA00hQwnHdl58"></script>
+
+<script>
+	map_style = [
+    {
+        "featureType": "all",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#4b480f"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "gamma": 0.01
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "saturation": -31
+            },
+            {
+                "lightness": -33
+            },
+            {
+                "weight": 2
+            },
+            {
+                "gamma": 0.8
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#f4f0e2"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#191935"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 30
+            },
+            {
+                "saturation": 30
+            },
+            {
+                "color": "#191935"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "saturation": 20
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 20
+            },
+            {
+                "saturation": -20
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#191935"
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 10
+            },
+            {
+                "saturation": -30
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "saturation": 25
+            },
+            {
+                "lightness": 25
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#191935"
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "lightness": "-26"
+            },
+            {
+                "saturation": "100"
+            },
+            {
+                "color": "#ffffff"
+            }
+        ]
+    }
+];
+</script>
+
+
+
+
+
     <link  href="img/favicon.png"   rel="icon"       type="image/png">
     <link  href="css/polices.css"   rel="stylesheet" type="text/css">
     <link  href="css/defaut.css"    rel="stylesheet" type="text/css">
@@ -230,10 +455,28 @@ function chemin_eteindre(n) {
 #article1 p, #article1 h1, #article1 h2, #article1 div {
     color:black;
 }
+#article1 article_texte {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+    -webkit-column-gap:   20px;
+       -moz-column-gap:   20px;
+            column-gap:   20px;
+ /* -webkit-column-rule:  1px solid lightblue; */
+ /*    -moz-column-rule:  1px solid lightblue; */
+ /*         column-rule:  1px solid lightblue; */
+}
+#article1 article_texte, #article1 article_texte * {
+    overflow:hidden;
+    line-height: 1.2;
+}
+#deplie_seulement1 {
+    display:none;
+}
 </style>
-<div class="article_splash_conteneur" id="article1">
-    <div class="splash"  style="background-image:url('http://lemontliban.fr/wp-content/uploads/2015/01/assortiment_mezzes_libanais1.jpg'); background-size:cover;"></div>
-    <div class="article" style="background:white;">
+<div class="article_splash_conteneur">
+    <div class="splash"  style="background-image:url('img/mezze.jpg'); background-size:cover;"></div>
+    <div class="article" id="article1" style="background:white;">
         <div class="article_entete">
             <div style="display:inline-block;"><h1>Jour ?</h1></div>
             <div style="float:right;">
@@ -241,24 +484,33 @@ function chemin_eteindre(n) {
                 <h2 style="display:inline-block; text-align:left; ">Liban</h2>
             </div>
         </div>
-        <div class="article_texte">
+        <div class="article_texte" id="article_texte1">
             
-    Les mezzes - Liban
-
     Lorsque je suis rentré dans ce petit restaurant au coin de la rue, je ne savais plus où donner de la tête. Tant de couleurs, tant de parfums et de saveurs ! J’y ai découvert le mezze. La variété des ingrédients et la finesse des assaisonnements : succulents. Et autant pour les végétariens que les gourmets carnivores !
 
 
     Les mezzes représentent parfaitement la richesse de la cuisine libanaise.
-    terme “Mezze” vient du mot “maza”  qui signifie saveur en persan. Je peux vous l’assurer,  ce nom est bien choisi : une bouchée de ces délicieux petits amuse-bouches feront frétiller vos papilles. Pas vraiment un plat, le mezze est plus un assortiment comparable aux ensoleillés tapas espagnols. Il se déguste entre amis ou en famille et fait partis des traditions orientales de convivialité et d’hospitalité libanaise.
+    Le terme “Mezze” vient du mot “maza” qui signifie saveur en persan. Je peux vous l’assurer, ce nom est bien choisi : une bouchée de ces délicieux petits amuse-bouches feront frétiller vos papilles. Pas vraiment un plat, le mezze est plus un assortiment comparable aux ensoleillés tapas espagnols. Il se déguste entre amis ou en famille et fait partie des traditions orientales de convivialité et d’hospitalité libanaise.
     Cru ou cuit, légumes ou céréales, croustillant ou fondant, tous se marient à merveille.
-    Les mezzes peuvent réunir plusieurs dizaines de plat chaud et froid : les feuilles de vignes farcies, le mtabbal batenjen, les kebbés… et impossible de passer à côté des kebbé krass, ces délicieuses boulettes de viandes et boulgour farcies d’oignons et de pignons de pains, ou encore le bien connu hommos, une douce purée de pois chiches. Traditionnel, inventif et créatif, c’est une découverte inoubliable pour le palais !
+    Les mezzes peuvent réunir plusieurs dizaines de plats chauds et froids : les feuilles de vignes farcies, le mtabbal batenjen, les kebbés… et impossible de passer à côté des kebbé krass, ces délicieuses boulettes de viandes et boulgour farcies d’oignons et de pignons de pains, ou encore le bien connu hommos, une douce purée de pois chiches. Traditionnel, inventif et créatif, c’est une découverte inoubliable pour le palais !
     Un seul mot à dire :
 
 
     Sahten!
 
         </div>
-        <img alt="foo" src="img/mais_ou_que_cetait.png" style="display:block; width:80%; margin:auto;">
+                        
+
+        <table style="width:100%;"><tr>
+            <td style="text-align:center;"><img src="img/macro1.png" style="width:100%; transform:translateX(50%);"></td>
+            <td style="text-align:center;">
+                <a href="javascript:void(0);">
+                    <img src="img/carre.png"  style="width:100%; position:relative; z-index:2;">
+                                    </a>
+            </td>
+            <td style="text-align:center;"><img src="img/macro2.png" style="width:100%; transform:translateX(-50%);"></td>
+        </tr></table>
+
     </div>
 </div>
 
@@ -267,10 +519,28 @@ function chemin_eteindre(n) {
 #article2 p, #article2 h1, #article2 h2, #article2 div {
     color:red;
 }
+#article2 article_texte {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+    -webkit-column-gap:   20px;
+       -moz-column-gap:   20px;
+            column-gap:   20px;
+ /* -webkit-column-rule:  1px solid lightblue; */
+ /*    -moz-column-rule:  1px solid lightblue; */
+ /*         column-rule:  1px solid lightblue; */
+}
+#article2 article_texte, #article2 article_texte * {
+    overflow:hidden;
+    line-height: 1.2;
+}
+#deplie_seulement2 {
+    display:none;
+}
 </style>
-<div class="article_splash_conteneur" id="article2">
-    <div class="splash"  style="background-image:url('http://lemontliban.fr/wp-content/uploads/2015/01/assortiment_mezzes_libanais1.jpg'); background-size:cover;"></div>
-    <div class="article" style="background:white;">
+<div class="article_splash_conteneur">
+    <div class="splash"  style="background-image:url('img/mezze.jpg'); background-size:cover;"></div>
+    <div class="article" id="article2" style="background:white;">
         <div class="article_entete">
             <div style="display:inline-block;"><h1>Jour ?</h1></div>
             <div style="float:right;">
@@ -278,24 +548,33 @@ function chemin_eteindre(n) {
                 <h2 style="display:inline-block; text-align:left; ">Liban</h2>
             </div>
         </div>
-        <div class="article_texte">
+        <div class="article_texte" id="article_texte2">
             
-    Les mezzes - Liban
-
     Lorsque je suis rentré dans ce petit restaurant au coin de la rue, je ne savais plus où donner de la tête. Tant de couleurs, tant de parfums et de saveurs ! J’y ai découvert le mezze. La variété des ingrédients et la finesse des assaisonnements : succulents. Et autant pour les végétariens que les gourmets carnivores !
 
 
     Les mezzes représentent parfaitement la richesse de la cuisine libanaise.
-    terme “Mezze” vient du mot “maza”  qui signifie saveur en persan. Je peux vous l’assurer,  ce nom est bien choisi : une bouchée de ces délicieux petits amuse-bouches feront frétiller vos papilles. Pas vraiment un plat, le mezze est plus un assortiment comparable aux ensoleillés tapas espagnols. Il se déguste entre amis ou en famille et fait partis des traditions orientales de convivialité et d’hospitalité libanaise.
+    Le terme “Mezze” vient du mot “maza” qui signifie saveur en persan. Je peux vous l’assurer, ce nom est bien choisi : une bouchée de ces délicieux petits amuse-bouches feront frétiller vos papilles. Pas vraiment un plat, le mezze est plus un assortiment comparable aux ensoleillés tapas espagnols. Il se déguste entre amis ou en famille et fait partie des traditions orientales de convivialité et d’hospitalité libanaise.
     Cru ou cuit, légumes ou céréales, croustillant ou fondant, tous se marient à merveille.
-    Les mezzes peuvent réunir plusieurs dizaines de plat chaud et froid : les feuilles de vignes farcies, le mtabbal batenjen, les kebbés… et impossible de passer à côté des kebbé krass, ces délicieuses boulettes de viandes et boulgour farcies d’oignons et de pignons de pains, ou encore le bien connu hommos, une douce purée de pois chiches. Traditionnel, inventif et créatif, c’est une découverte inoubliable pour le palais !
+    Les mezzes peuvent réunir plusieurs dizaines de plats chauds et froids : les feuilles de vignes farcies, le mtabbal batenjen, les kebbés… et impossible de passer à côté des kebbé krass, ces délicieuses boulettes de viandes et boulgour farcies d’oignons et de pignons de pains, ou encore le bien connu hommos, une douce purée de pois chiches. Traditionnel, inventif et créatif, c’est une découverte inoubliable pour le palais !
     Un seul mot à dire :
 
 
     Sahten!
 
         </div>
-        <img alt="foo" src="img/mais_ou_que_cetait.png" style="display:block; width:80%; margin:auto;">
+                        
+
+        <table style="width:100%;"><tr>
+            <td style="text-align:center;"><img src="img/macro1.png" style="width:100%; transform:translateX(50%);"></td>
+            <td style="text-align:center;">
+                <a href="javascript:void(0);">
+                    <img src="img/carre.png"  style="width:100%; position:relative; z-index:2;">
+                                    </a>
+            </td>
+            <td style="text-align:center;"><img src="img/macro2.png" style="width:100%; transform:translateX(-50%);"></td>
+        </tr></table>
+
     </div>
 </div>
 
@@ -304,10 +583,28 @@ function chemin_eteindre(n) {
 #article3 p, #article3 h1, #article3 h2, #article3 div {
     color:red;
 }
+#article3 article_texte {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+    -webkit-column-gap:   20px;
+       -moz-column-gap:   20px;
+            column-gap:   20px;
+ /* -webkit-column-rule:  1px solid lightblue; */
+ /*    -moz-column-rule:  1px solid lightblue; */
+ /*         column-rule:  1px solid lightblue; */
+}
+#article3 article_texte, #article3 article_texte * {
+    overflow:hidden;
+    line-height: 1.2;
+}
+#deplie_seulement3 {
+    display:none;
+}
 </style>
-<div class="article_splash_conteneur" id="article3">
-    <div class="splash"  style="background-image:url('http://lemontliban.fr/wp-content/uploads/2015/01/assortiment_mezzes_libanais1.jpg'); background-size:cover;"></div>
-    <div class="article" style="background:white;">
+<div class="article_splash_conteneur">
+    <div class="splash"  style="background-image:url('img/mezze.jpg'); background-size:cover;"></div>
+    <div class="article" id="article3" style="background:white;">
         <div class="article_entete">
             <div style="display:inline-block;"><h1>Jour ?</h1></div>
             <div style="float:right;">
@@ -315,69 +612,126 @@ function chemin_eteindre(n) {
                 <h2 style="display:inline-block; text-align:left; ">Liban</h2>
             </div>
         </div>
-        <div class="article_texte">
+        <div class="article_texte" id="article_texte3">
             
-    Les mezzes - Liban
-
     Lorsque je suis rentré dans ce petit restaurant au coin de la rue, je ne savais plus où donner de la tête. Tant de couleurs, tant de parfums et de saveurs ! J’y ai découvert le mezze. La variété des ingrédients et la finesse des assaisonnements : succulents. Et autant pour les végétariens que les gourmets carnivores !
 
 
     Les mezzes représentent parfaitement la richesse de la cuisine libanaise.
-    terme “Mezze” vient du mot “maza”  qui signifie saveur en persan. Je peux vous l’assurer,  ce nom est bien choisi : une bouchée de ces délicieux petits amuse-bouches feront frétiller vos papilles. Pas vraiment un plat, le mezze est plus un assortiment comparable aux ensoleillés tapas espagnols. Il se déguste entre amis ou en famille et fait partis des traditions orientales de convivialité et d’hospitalité libanaise.
+    Le terme “Mezze” vient du mot “maza” qui signifie saveur en persan. Je peux vous l’assurer, ce nom est bien choisi : une bouchée de ces délicieux petits amuse-bouches feront frétiller vos papilles. Pas vraiment un plat, le mezze est plus un assortiment comparable aux ensoleillés tapas espagnols. Il se déguste entre amis ou en famille et fait partie des traditions orientales de convivialité et d’hospitalité libanaise.
     Cru ou cuit, légumes ou céréales, croustillant ou fondant, tous se marient à merveille.
-    Les mezzes peuvent réunir plusieurs dizaines de plat chaud et froid : les feuilles de vignes farcies, le mtabbal batenjen, les kebbés… et impossible de passer à côté des kebbé krass, ces délicieuses boulettes de viandes et boulgour farcies d’oignons et de pignons de pains, ou encore le bien connu hommos, une douce purée de pois chiches. Traditionnel, inventif et créatif, c’est une découverte inoubliable pour le palais !
+    Les mezzes peuvent réunir plusieurs dizaines de plats chauds et froids : les feuilles de vignes farcies, le mtabbal batenjen, les kebbés… et impossible de passer à côté des kebbé krass, ces délicieuses boulettes de viandes et boulgour farcies d’oignons et de pignons de pains, ou encore le bien connu hommos, une douce purée de pois chiches. Traditionnel, inventif et créatif, c’est une découverte inoubliable pour le palais !
     Un seul mot à dire :
 
 
     Sahten!
 
         </div>
-        <img alt="foo" src="img/mais_ou_que_cetait.png" style="display:block; width:80%; margin:auto;">
+                        
+
+        <table style="width:100%;"><tr>
+            <td style="text-align:center;"><img src="img/macro1.png" style="width:100%; transform:translateX(50%);"></td>
+            <td style="text-align:center;">
+                <a href="javascript:void(0);">
+                    <img src="img/carre.png"  style="width:100%; position:relative; z-index:2;">
+                                    </a>
+            </td>
+            <td style="text-align:center;"><img src="img/macro2.png" style="width:100%; transform:translateX(-50%);"></td>
+        </tr></table>
+
     </div>
 </div>
 
 
     
-<div style="background:#111111; heigth:100px;">
-    <div id="gallerie" class="gallerie" style="background:#444444;">
+<div class="gallerie_conteneur" style="background:#111111;">
+    <div id="gallerie" class="gallerie" style="background:black;">
         
-        
-    <div class="vignette" style="height:132px;"></div>
-
-        
-    <div class="vignette" style="height:301px;"></div>
-
-        
-    <div class="vignette" style="height:103px;"></div>
-
-        
-    <div class="vignette" style="height:188px;"></div>
-
-        
-    <div class="vignette" style="height:150px;"></div>
-
-        
-    <div class="vignette" style="height:250px;"></div>
-
-        
-    <div class="vignette" style="height:250px;"></div>
-
-        
-    <div class="vignette" style="height:126px;"></div>
-
-        
-    <div class="vignette" style="height:145px;"></div>
-
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/salé/5bbbfffc1b7a63dac9cf1e85a151971d.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/salé/agneau_chorba.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/salé/baba_ganoush.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/salé/chorba.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/salé/e30f67777af1b445e9356c8ca74c1a8e.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/salé/fatayer2.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/salé/fattet_hoummos.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/salé/feuilles de vignes 1.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/salé/feuilles de vignes2.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/salé/galettes.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/salé/hummus.png">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/salé/lahmacun2.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/salé/lahmacun.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/salé/mezze1.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/salé/mezze2.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/salé/mezze3.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/salé/tajine.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/salé/tumblr_nfhvzfUvzK1tfohr2o8_500.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/8e03403443ce9ec44dbf112ecb9e2323.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/b7ea460b2c0d41be69c50342b66be4ce.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/bakery.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/baklava_amandes.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/baklava_honey_nut.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/baklava.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/baklava_pistache2.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/baklava_pistache.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/basbousa.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/boisson_gateau.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/bonbons.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/d4987ad023667cca1637b620330d238e.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/dattes1.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/dattes2.png">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/e54a1879df6bef7ba9fcceec7d38d7d4.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/grewesh_farcis.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/halawet_el_jeben.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/honey_baklava1.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/honey_baklava2.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/honey_baklava3.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/honey_baklava.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/loukoum2.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/loukoum.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/tumblr_n7sjd6iHpN1txobqgo1_1280.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/gustatif/sucré/vanilla_baklava.jpg">
     
     </div>
 </div>
 
 
+    <div id="carte_footer" style="width:100%; height:80%;"></div>
+    <script>
+    $(function(){
+        map_carte_footer = new google.maps.Map(document.getElementById('carte_footer'), {
+            center: new google.maps.LatLng(33.854721, 35.86228499999993),
+            zoom: 4,
+            panControl: false,
+            zoomControl: false,
+            mapTypeControl: false,
+            streetViewControl: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            scrollwheel: false,
+            styles: map_style
+        });
+    });
+    </script>
+
+    <script>
+    $(function(){
+        marker_carte_footer = new google.maps.Marker({
+            position: new google.maps.LatLng(33.854721, 35.86228499999993),
+            map: map_carte_footer,
+            visible: true,
+            icon: "img/map_marker.png"
+        });
+    });
+    </script>
+
+
     
-<footer class="footer_non_collant">
+<style>
+#footer_hack   { background-color:white; }
+#footer_hack * { color:black; }
+</style>
+<footer class="footer_non_collant" id="footer_hack">
     <div style="height:10px;"></div>
-    <a href="javascript:alert('Plus tard :|');"><div style="background-color:#555555; height:32px; text-align:center;">Et sur une carte ?</div></a>
-    
+        
 <nav>
     <a href="mon_voyage.html">MON VOYAGE</a>
     <a href="contact.html">CONTACT</a>

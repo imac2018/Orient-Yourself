@@ -30,3 +30,24 @@ $(function(){
     $("#page_chargement").delay(4000).fadeOut("slow");
     //pastilles_chargees();
 });
+
+
+
+article_duree_ms = 200;
+function deplier_article(i) {
+    $("#article"+i)
+        .animate({ width: "+=30%" }, article_duree_ms);
+    $("#article_texte"+i)
+        .delay(article_duree_ms/2).queue(function(next) { $(this).css("column-count", "2"); next(); })
+    $("#plie_seulement"+i)  .fadeOut({ duration:article_duree_ms} );
+    $("#deplie_seulement"+i).fadeIn( { duration:article_duree_ms} );
+}
+function plier_article(i) {
+    $("#article"+i)
+        .animate({ width: "-=30%" }, article_duree_ms);
+    $("#article_texte"+i)
+        .delay(article_duree_ms/2).queue(function(next) { $(this).css("column-count", "1"); next(); })
+    $("#plie_seulement"+i)  .fadeIn( {duration:article_duree_ms} );
+    $("#deplie_seulement"+i).fadeOut({duration:article_duree_ms} );
+}
+

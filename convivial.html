@@ -52,6 +52,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <meta charset="utf-8">
 <!-- 
     CE FICHIER A ETE GENERE AUTOMATIQUEMENT VIA M4. 
@@ -65,6 +81,215 @@
             crossorigin="anonymous">
     </script>
     <script src="js/script.js"      type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVtUXJ1AiE49ZmTGwn0GKA00hQwnHdl58"></script>
+
+<script>
+	map_style = [
+    {
+        "featureType": "all",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#4b480f"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "gamma": 0.01
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "saturation": -31
+            },
+            {
+                "lightness": -33
+            },
+            {
+                "weight": 2
+            },
+            {
+                "gamma": 0.8
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#f4f0e2"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#191935"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 30
+            },
+            {
+                "saturation": 30
+            },
+            {
+                "color": "#191935"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "saturation": 20
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 20
+            },
+            {
+                "saturation": -20
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#191935"
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 10
+            },
+            {
+                "saturation": -30
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "saturation": 25
+            },
+            {
+                "lightness": 25
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#191935"
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "lightness": "-26"
+            },
+            {
+                "saturation": "100"
+            },
+            {
+                "color": "#ffffff"
+            }
+        ]
+    }
+];
+</script>
+
+
+
+
+
     <link  href="img/favicon.png"   rel="icon"       type="image/png">
     <link  href="css/polices.css"   rel="stylesheet" type="text/css">
     <link  href="css/defaut.css"    rel="stylesheet" type="text/css">
@@ -230,10 +455,28 @@ function chemin_eteindre(n) {
 #article1 p, #article1 h1, #article1 h2, #article1 div {
     color:black;
 }
+#article1 article_texte {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+    -webkit-column-gap:   20px;
+       -moz-column-gap:   20px;
+            column-gap:   20px;
+ /* -webkit-column-rule:  1px solid lightblue; */
+ /*    -moz-column-rule:  1px solid lightblue; */
+ /*         column-rule:  1px solid lightblue; */
+}
+#article1 article_texte, #article1 article_texte * {
+    overflow:hidden;
+    line-height: 1.2;
+}
+#deplie_seulement1 {
+    display:none;
+}
 </style>
-<div class="article_splash_conteneur" id="article1">
+<div class="article_splash_conteneur">
     <div class="splash"  style="background-image:url('http://www.lemag.ma/photo/art/default/6088427-9087580.jpg?v=1385661205'); background-size:cover;"></div>
-    <div class="article" style="background:white;">
+    <div class="article" id="article1" style="background:white;">
         <div class="article_entete">
             <div style="display:inline-block;"><h1>Jour ?</h1></div>
             <div style="float:right;">
@@ -241,29 +484,36 @@ function chemin_eteindre(n) {
                 <h2 style="display:inline-block; text-align:left; ">Rabat<br>Maroc</h2>
             </div>
         </div>
-        <div class="article_texte">
+        <div class="article_texte" id="article_texte1">
             
-    Kess tey - Rabat -  Maroc
-
     C’est à Rabat, la capitale du Maroc, que j’ai vraiment découvert la tradition du thé. Egaré dans la ville, un habitant a très aimablement accepté de me guider. Nous avons fait connaissance et il m’a alors proposé de partager le thé chez lui.
     Véritable symbole de convivialité, le thé invite au partage et nous rassemble. 
-    J’étais admiratif de la beauté du geste, inimitable et précis, lorsqu’il est versé de haut. Et ce parfum sucré de menthe charmant les sens, sa mousse légère… Impossible de ne pas céder à l’appel de la convivialité. De toute façon, la règle est bien connue:  un verre de thé ne se refuse pas!
+    J’étais admiratif de la beauté du geste, inimitable et précis, lorsqu’il est versé de haut. Et ce parfum sucré de menthe charmant les sens, sa mousse légère… Impossible de ne pas céder à l’appel de la convivialité. De toute façon, la règle est bien connue:  un verre de thé ne se refuse pas !
     Ne soyez pas surpris de voir le chef de famille le préparer : le thé, c’est une affaire d’homme. 
     Ce vieil homme que j’ai rencontré m’a d’ailleurs raconté que, dans la tradition, ce délicieux liquide ambré est servi trois fois de suite. Il m’a cité ce proverbe : 
     “Le premier verre est doux comme la vie, le second est fort comme l’amour, le troisième est amer comme la mort”.
 
 
-    Il ne m’a pas seulement donné ce dicton , il m’a aussi transmis ses conseils pour un thé réussi ! Je vais vous les partager, afin que vous puissiez vous aussi mettre un peu de soleil dans vos verres!
-    Rincez le thé à l’eau frémissante pour enlever l’amertume du thé
-    Ne faites pas bouillir l’eau, gardez là juste frémissante avec de belles bulles rondes
-    N’utilisez pas de produit pour laver la théière, rincer là seulement à l’eau.
-    Soyez gourmand : les pâtisseries “lien vers pâtisseries + nom “ accompagneront à merveille votre thé.
-
-
+    Il ne m’a pas seulement donné ce dicton, il m’a aussi transmis ses conseils pour un thé réussi ! Je vais vous les partager, afin que vous puissiez vous aussi mettre un peu de soleil dans vos verres!
+    Rincez le thé à l’eau frémissante pour enlever l’amertume du thé.
+    Ne faites pas bouillir l’eau, gardez-la juste frémissante avec de belles bulles rondes.
+    N’utilisez pas de produit pour laver la théière, rincez la seulement à l’eau.
+    
     Saha li-koum!
 
         </div>
-        <img alt="foo" src="img/mais_ou_que_cetait.png" style="display:block; width:80%; margin:auto;">
+                        
+
+        <table style="width:100%;"><tr>
+            <td style="text-align:center;"><img src="img/macro1.png" style="width:100%; transform:translateX(50%);"></td>
+            <td style="text-align:center;">
+                <a href="javascript:void(0);">
+                    <img src="img/carre.png"  style="width:100%; position:relative; z-index:2;">
+                                    </a>
+            </td>
+            <td style="text-align:center;"><img src="img/macro2.png" style="width:100%; transform:translateX(-50%);"></td>
+        </tr></table>
+
     </div>
 </div>
 
@@ -272,10 +522,28 @@ function chemin_eteindre(n) {
 #article2 p, #article2 h1, #article2 h2, #article2 div {
     color:red;
 }
+#article2 article_texte {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+    -webkit-column-gap:   20px;
+       -moz-column-gap:   20px;
+            column-gap:   20px;
+ /* -webkit-column-rule:  1px solid lightblue; */
+ /*    -moz-column-rule:  1px solid lightblue; */
+ /*         column-rule:  1px solid lightblue; */
+}
+#article2 article_texte, #article2 article_texte * {
+    overflow:hidden;
+    line-height: 1.2;
+}
+#deplie_seulement2 {
+    display:none;
+}
 </style>
-<div class="article_splash_conteneur" id="article2">
+<div class="article_splash_conteneur">
     <div class="splash"  style="background-image:url('http://www.lemag.ma/photo/art/default/6088427-9087580.jpg?v=1385661205'); background-size:cover;"></div>
-    <div class="article" style="background:white;">
+    <div class="article" id="article2" style="background:white;">
         <div class="article_entete">
             <div style="display:inline-block;"><h1>Jour ?</h1></div>
             <div style="float:right;">
@@ -283,29 +551,36 @@ function chemin_eteindre(n) {
                 <h2 style="display:inline-block; text-align:left; ">Rabat<br>Maroc</h2>
             </div>
         </div>
-        <div class="article_texte">
+        <div class="article_texte" id="article_texte2">
             
-    Kess tey - Rabat -  Maroc
-
     C’est à Rabat, la capitale du Maroc, que j’ai vraiment découvert la tradition du thé. Egaré dans la ville, un habitant a très aimablement accepté de me guider. Nous avons fait connaissance et il m’a alors proposé de partager le thé chez lui.
     Véritable symbole de convivialité, le thé invite au partage et nous rassemble. 
-    J’étais admiratif de la beauté du geste, inimitable et précis, lorsqu’il est versé de haut. Et ce parfum sucré de menthe charmant les sens, sa mousse légère… Impossible de ne pas céder à l’appel de la convivialité. De toute façon, la règle est bien connue:  un verre de thé ne se refuse pas!
+    J’étais admiratif de la beauté du geste, inimitable et précis, lorsqu’il est versé de haut. Et ce parfum sucré de menthe charmant les sens, sa mousse légère… Impossible de ne pas céder à l’appel de la convivialité. De toute façon, la règle est bien connue:  un verre de thé ne se refuse pas !
     Ne soyez pas surpris de voir le chef de famille le préparer : le thé, c’est une affaire d’homme. 
     Ce vieil homme que j’ai rencontré m’a d’ailleurs raconté que, dans la tradition, ce délicieux liquide ambré est servi trois fois de suite. Il m’a cité ce proverbe : 
     “Le premier verre est doux comme la vie, le second est fort comme l’amour, le troisième est amer comme la mort”.
 
 
-    Il ne m’a pas seulement donné ce dicton , il m’a aussi transmis ses conseils pour un thé réussi ! Je vais vous les partager, afin que vous puissiez vous aussi mettre un peu de soleil dans vos verres!
-    Rincez le thé à l’eau frémissante pour enlever l’amertume du thé
-    Ne faites pas bouillir l’eau, gardez là juste frémissante avec de belles bulles rondes
-    N’utilisez pas de produit pour laver la théière, rincer là seulement à l’eau.
-    Soyez gourmand : les pâtisseries “lien vers pâtisseries + nom “ accompagneront à merveille votre thé.
-
-
+    Il ne m’a pas seulement donné ce dicton, il m’a aussi transmis ses conseils pour un thé réussi ! Je vais vous les partager, afin que vous puissiez vous aussi mettre un peu de soleil dans vos verres!
+    Rincez le thé à l’eau frémissante pour enlever l’amertume du thé.
+    Ne faites pas bouillir l’eau, gardez-la juste frémissante avec de belles bulles rondes.
+    N’utilisez pas de produit pour laver la théière, rincez la seulement à l’eau.
+    
     Saha li-koum!
 
         </div>
-        <img alt="foo" src="img/mais_ou_que_cetait.png" style="display:block; width:80%; margin:auto;">
+                        
+
+        <table style="width:100%;"><tr>
+            <td style="text-align:center;"><img src="img/macro1.png" style="width:100%; transform:translateX(50%);"></td>
+            <td style="text-align:center;">
+                <a href="javascript:void(0);">
+                    <img src="img/carre.png"  style="width:100%; position:relative; z-index:2;">
+                                    </a>
+            </td>
+            <td style="text-align:center;"><img src="img/macro2.png" style="width:100%; transform:translateX(-50%);"></td>
+        </tr></table>
+
     </div>
 </div>
 
@@ -314,10 +589,28 @@ function chemin_eteindre(n) {
 #article3 p, #article3 h1, #article3 h2, #article3 div {
     color:red;
 }
+#article3 article_texte {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+    -webkit-column-gap:   20px;
+       -moz-column-gap:   20px;
+            column-gap:   20px;
+ /* -webkit-column-rule:  1px solid lightblue; */
+ /*    -moz-column-rule:  1px solid lightblue; */
+ /*         column-rule:  1px solid lightblue; */
+}
+#article3 article_texte, #article3 article_texte * {
+    overflow:hidden;
+    line-height: 1.2;
+}
+#deplie_seulement3 {
+    display:none;
+}
 </style>
-<div class="article_splash_conteneur" id="article3">
+<div class="article_splash_conteneur">
     <div class="splash"  style="background-image:url('http://www.lemag.ma/photo/art/default/6088427-9087580.jpg?v=1385661205'); background-size:cover;"></div>
-    <div class="article" style="background:white;">
+    <div class="article" id="article3" style="background:white;">
         <div class="article_entete">
             <div style="display:inline-block;"><h1>Jour ?</h1></div>
             <div style="float:right;">
@@ -325,74 +618,107 @@ function chemin_eteindre(n) {
                 <h2 style="display:inline-block; text-align:left; ">Rabat<br>Maroc</h2>
             </div>
         </div>
-        <div class="article_texte">
+        <div class="article_texte" id="article_texte3">
             
-    Kess tey - Rabat -  Maroc
-
     C’est à Rabat, la capitale du Maroc, que j’ai vraiment découvert la tradition du thé. Egaré dans la ville, un habitant a très aimablement accepté de me guider. Nous avons fait connaissance et il m’a alors proposé de partager le thé chez lui.
     Véritable symbole de convivialité, le thé invite au partage et nous rassemble. 
-    J’étais admiratif de la beauté du geste, inimitable et précis, lorsqu’il est versé de haut. Et ce parfum sucré de menthe charmant les sens, sa mousse légère… Impossible de ne pas céder à l’appel de la convivialité. De toute façon, la règle est bien connue:  un verre de thé ne se refuse pas!
+    J’étais admiratif de la beauté du geste, inimitable et précis, lorsqu’il est versé de haut. Et ce parfum sucré de menthe charmant les sens, sa mousse légère… Impossible de ne pas céder à l’appel de la convivialité. De toute façon, la règle est bien connue:  un verre de thé ne se refuse pas !
     Ne soyez pas surpris de voir le chef de famille le préparer : le thé, c’est une affaire d’homme. 
     Ce vieil homme que j’ai rencontré m’a d’ailleurs raconté que, dans la tradition, ce délicieux liquide ambré est servi trois fois de suite. Il m’a cité ce proverbe : 
     “Le premier verre est doux comme la vie, le second est fort comme l’amour, le troisième est amer comme la mort”.
 
 
-    Il ne m’a pas seulement donné ce dicton , il m’a aussi transmis ses conseils pour un thé réussi ! Je vais vous les partager, afin que vous puissiez vous aussi mettre un peu de soleil dans vos verres!
-    Rincez le thé à l’eau frémissante pour enlever l’amertume du thé
-    Ne faites pas bouillir l’eau, gardez là juste frémissante avec de belles bulles rondes
-    N’utilisez pas de produit pour laver la théière, rincer là seulement à l’eau.
-    Soyez gourmand : les pâtisseries “lien vers pâtisseries + nom “ accompagneront à merveille votre thé.
-
-
+    Il ne m’a pas seulement donné ce dicton, il m’a aussi transmis ses conseils pour un thé réussi ! Je vais vous les partager, afin que vous puissiez vous aussi mettre un peu de soleil dans vos verres!
+    Rincez le thé à l’eau frémissante pour enlever l’amertume du thé.
+    Ne faites pas bouillir l’eau, gardez-la juste frémissante avec de belles bulles rondes.
+    N’utilisez pas de produit pour laver la théière, rincez la seulement à l’eau.
+    
     Saha li-koum!
 
         </div>
-        <img alt="foo" src="img/mais_ou_que_cetait.png" style="display:block; width:80%; margin:auto;">
+                        
+
+        <table style="width:100%;"><tr>
+            <td style="text-align:center;"><img src="img/macro1.png" style="width:100%; transform:translateX(50%);"></td>
+            <td style="text-align:center;">
+                <a href="javascript:void(0);">
+                    <img src="img/carre.png"  style="width:100%; position:relative; z-index:2;">
+                                    </a>
+            </td>
+            <td style="text-align:center;"><img src="img/macro2.png" style="width:100%; transform:translateX(-50%);"></td>
+        </tr></table>
+
     </div>
 </div>
 
 
     
-<div style="background:#111111; heigth:100px;">
-    <div id="gallerie" class="gallerie" style="background:#444444;">
+<div class="gallerie_conteneur" style="background:#111111;">
+    <div id="gallerie" class="gallerie" style="background:black;">
         
-        
-    <div class="vignette" style="height:301px;"></div>
-
-        
-    <div class="vignette" style="height:132px;"></div>
-
-        
-    <div class="vignette" style="height:150px;"></div>
-
-        
-    <div class="vignette" style="height:250px;"></div>
-
-        
-    <div class="vignette" style="height:145px;"></div>
-
-        
-    <div class="vignette" style="height:250px;"></div>
-
-        
-    <div class="vignette" style="height:126px;"></div>
-
-        
-    <div class="vignette" style="height:103px;"></div>
-
-        
-    <div class="vignette" style="height:188px;"></div>
-
+<img style="width:100%;" alt="..." src="img/galleries/convivial/11e4a4cc1548d3440170baf2f50a2d0c.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/convivial/1.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/convivial/2953e58ae44837a1d2ccbb99404981f8.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/convivial/bec1c68cafff0ee221bce818efb6712c.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/convivial/ca119acd0316795e05b394653ebd43f9.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/convivial/dutar_by_xamsiya.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/convivial/ef0ebb25a6e94487d62ac792cdb07d21.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/convivial/f06d02232af1d7fb935441907d911c19-d37dfhx.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/convivial/ney_by_someplus.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/convivial/salon-arabe-1285058709.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/convivial/salon arabe moderne4.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/convivial/salon-traditionnel-marocain1.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/convivial/tumblr_m6xwn8lC3D1r6srdyo1_500.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/convivial/tumblr_mc7qsqZJUd1rreuibo1_500.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/convivial/tumblr_md8qyoTAqr1rkxsfko1_1280.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/convivial/tumblr_mvjwz3d8I41qk66jfo1_1280.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/convivial/tumblr_n1ardinjVd1qk66jfo1_1280.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/convivial/tumblr_n2lihrvxdO1s7f3fyo1_1280.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/convivial/tumblr_n63nml1CrV1s9ed3uo1_1280.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/convivial/tumblr_ncgw1inXod1s0d4j5o1_500.jpg">
+<img style="width:100%;" alt="..." src="img/galleries/convivial/tumblr_obabo52XT11shq20ro1_1280.png">
     
     </div>
 </div>
 
 
+    <div id="carte_footer" style="width:100%; height:80%;"></div>
+    <script>
+    $(function(){
+        map_carte_footer = new google.maps.Map(document.getElementById('carte_footer'), {
+            center: new google.maps.LatLng(33.9715904, -6.849812899999961),
+            zoom: 4,
+            panControl: false,
+            zoomControl: false,
+            mapTypeControl: false,
+            streetViewControl: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            scrollwheel: false,
+            styles: map_style
+        });
+    });
+    </script>
+
+    <script>
+    $(function(){
+        marker_carte_footer = new google.maps.Marker({
+            position: new google.maps.LatLng(33.9715904, -6.849812899999961),
+            map: map_carte_footer,
+            visible: true,
+            icon: "img/map_marker.png"
+        });
+    });
+    </script>
+
+
     
-<footer class="footer_non_collant">
+<style>
+#footer_hack   { background-color:white; }
+#footer_hack * { color:black; }
+</style>
+<footer class="footer_non_collant" id="footer_hack">
     <div style="height:10px;"></div>
-    <a href="javascript:alert('Plus tard :|');"><div style="background-color:#555555; height:32px; text-align:center;">Et sur une carte ?</div></a>
-    
+        
 <nav>
     <a href="mon_voyage.html">MON VOYAGE</a>
     <a href="contact.html">CONTACT</a>
