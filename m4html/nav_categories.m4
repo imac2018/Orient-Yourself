@@ -59,7 +59,7 @@ function chemin_eteindre(n) {
 m4_define(<:xx_nav_categories_chemin_accueil:>, 
 xx_nav_categories_chemin_script()
 <div style="width:75%; text-align:center; display:inline-block;">
-  xx_nav_categories_perle(panoramique.html, img/menu_accueil/n1_n.png, img/menu_accueil/n1_c.png, img/menu_accueil/n1_s.png,  5.47417116422513492675%, 1, -77px, -28px, PANORAMIQUE)
+  xx_nav_categories_perle(panoramique.html, img/menu_accueil/n1_n.png, img/menu_accueil/n1_c.png, img/menu_accueil/n1_s.png,  5.47417116422513492675%, 1, -60px, -28px, PANORAMIQUE)
   xx_nav_categories_chmin(panoramique.html, img/menu_accueil/c1.png,   img/menu_accueil/c1.png,   img/menu_accueil/c1.png,   17.19352351580570547417%, 1, -22px, -30px, PANORAMIQUE)
   xx_nav_categories_perle(spirituel.html,   img/menu_accueil/n2_n.png, img/menu_accueil/n2_c.png, img/menu_accueil/n2_s.png,  7.71010023130300693909%, 2, -12px, -30px, SPIRITUEL)
   xx_nav_categories_chmin(spirituel.html,   img/menu_accueil/c2.png,   img/menu_accueil/c2.png,   img/menu_accueil/c2.png,   13.10717039321511179645%, 2, -22px, -30px, SPIRITUEL)
