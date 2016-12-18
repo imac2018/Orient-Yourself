@@ -11,3 +11,11 @@ m4_define(<:xx_header_au_sacados:>,
 </td></tr></table>
 </div>
 )
+m4_define(<:xx_header_au_sacados_sans_monvoyage:>,
+<div style="position:fixed; top:0; left:0; width:100%; z-index:800;">
+<table style="width:100%;"><tr><td>
+    <a href="index.html"><img class="nav_categorie_logo" alt="logo" src="img/logo_blanc.png"></a>
+</td><td style="text-align:right; vertical-align:middle;">
+</td></tr></table>
+</div>
+)

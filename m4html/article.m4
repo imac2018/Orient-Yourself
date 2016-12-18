@@ -25,13 +25,18 @@ m4_define(<:xx_article:>, <:
 <div class="article_splash_conteneur">
     <div class="splash"  style="background-image:url('$2'); background-size:cover;"></div>
     <div class="article" id="article$1" style="background:$3;">
-        <div class="article_entete">
-            <div style="display:inline-block;"><h1 style="font-size:1.2em; font-weight:lighter; transform:translateY(-16px);">$5</h1></div>
-            <div style="float:right;">
-                <h2 style="display:inline-block; text-align:right; font-size: 1.5em; line-height: 1.2;">$6</h2>
-                <h2 style="display:inline-block; text-align:right; font-size: 1.5em; line-height: 1.2; font-weight:lighter; margin-left:10px;">$7</h2>
-            </div>
-        </div>
+        m4_dnl <div class="article_entete">
+        m4_dnl     <div style="display:inline-block;"><h1 style="font-size:1em; font-weight:lighter; transform:translateY(-16px);">$5</h1></div>
+        m4_dnl     <div style="float:right;">
+        m4_dnl         <h2 style="display:inline-block; text-align:right; font-size: 1em; line-height: 1.2;">$6</h2>
+        m4_dnl         <h2 style="display:inline-block; text-align:right; font-size: 1em; line-height: 1.2; font-weight:lighter; margin-left:10px;">$7</h2>
+        m4_dnl     </div>
+        m4_dnl </div>
+        <table style="width:100%;"><tr>
+            <td style="padding:30px 0 30px 20px; font-size:1.2em; font-weight:lighter;">$5</td>
+            <td style="padding:0 0 0 0; font-size:1.5em; line-height:1.2; text-align:right; font-weight:bold;">$6</td>
+            <td style="padding:0 0 0 0; font-size:1.5em; line-height:1.2; text-align:left;  font-weight:lighter; margin-left:10px;">$7</td>
+        </tr></table>
         <div class="article_texte" id="article_texte$1">
             $8
         </div>

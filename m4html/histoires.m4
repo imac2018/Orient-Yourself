@@ -97,3 +97,16 @@ m4_define(<:xx_histoire_artisanal_poterie_meybod:>, <:<:
     Un autre motif ressortait parmi les décorations : le poisson. Il est un autre symbole important. C’est un porte bonheur, un symbole de vie et d’abondance. <br>
     Ces motif sont omniprésents dans la poterie meybodienne et représentent bien la culture de cette ville, une culture riche que j’ai pu découvrir le temps d’un journée.<br>
 :>:>)
+
+m4_define(<:xx_histoire_monvoyage:>, <:<:
+Bonjour !<br>
+<br>
+Je m’appelle André, et je suis le routard fictif de ce blog ! C’est sur celui-ci que je rédige des articles sur mon voyage en Orient, comme l’on écrirait des souvenirs sur son carnet de route. <br>
+<br>
+J’ai indiqué sur la carte tous les lieux importants que j’ai visités et dont je parle dans les articles. Mon voyage s’étend sur tout le Moyen-Orient, partant des magnifiques paysages Iraniens pour aller jusqu’aux petites douceurs du Maroc. <br>
+:>:>)
+
+m4_define(<:xx_histoire_loremipsum:>, <:<:
+<i>Cet article est un placeholder.</i><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+:>:>)

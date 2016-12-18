@@ -72,6 +72,11 @@
 
 
 
+
+
+
+
+
         <meta charset="utf-8">
 <!-- 
     CE FICHIER A ETE GENERE AUTOMATIQUEMENT VIA M4. 
@@ -291,6 +296,212 @@
 </script>
 
 
+<script>
+	map_style_monvoyage = [
+    {
+        "featureType": "all",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#4b480f"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "gamma": 0.01
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "saturation": -31
+            },
+            {
+                "lightness": -33
+            },
+            {
+                "weight": 2
+            },
+            {
+                "gamma": 0.8
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#f4f0e2"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#424242"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 30
+            },
+            {
+                "saturation": 30
+            },
+            {
+                "color": "#424242"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "saturation": 20
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 20
+            },
+            {
+                "saturation": -20
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#424242"
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 10
+            },
+            {
+                "saturation": -30
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "saturation": 25
+            },
+            {
+                "lightness": 25
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#424242"
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "lightness": "-26"
+            },
+            {
+                "saturation": "100"
+            },
+            {
+                "color": "#494949"
+            }
+        ]
+    }
+];
+</script>
+
+
+
+
 
 
 
@@ -440,11 +651,6 @@ function chemin_eteindre(n) {
     </a></p>
 
         
-    <p><a href="javascript:glisser('article3');">
-        <img src="img/pastille.png" alt="p" class="nav_article_puce">
-    </a></p>
-
-        
     <p><a href="javascript:glisser('gallerie');">
         <img src="img/pastille_ronde.png" alt="p" class="nav_article_puce">
     </a></p>
@@ -480,13 +686,11 @@ function chemin_eteindre(n) {
 <div class="article_splash_conteneur">
     <div class="splash"  style="background-image:url('img/kesstey.jpg'); background-size:cover;"></div>
     <div class="article" id="article1" style="background:white;">
-        <div class="article_entete">
-            <div style="display:inline-block;"><h1 style="font-size:1.2em; font-weight:lighter; transform:translateY(-16px);">Jour 18</h1></div>
-            <div style="float:right;">
-                <h2 style="display:inline-block; text-align:right; font-size: 1.5em; line-height: 1.2;">Kess tey</h2>
-                <h2 style="display:inline-block; text-align:right; font-size: 1.5em; line-height: 1.2; font-weight:lighter; margin-left:10px;">Rabat<br>Maroc</h2>
-            </div>
-        </div>
+                                                                <table style="width:100%;"><tr>
+            <td style="padding:30px 0 30px 20px; font-size:1.2em; font-weight:lighter;">Jour 18</td>
+            <td style="padding:0 0 0 0; font-size:1.5em; line-height:1.2; text-align:right; font-weight:bold;">Kess tey</td>
+            <td style="padding:0 0 0 0; font-size:1.5em; line-height:1.2; text-align:left;  font-weight:lighter; margin-left:10px;">Rabat<br>Maroc</td>
+        </tr></table>
         <div class="article_texte" id="article_texte1">
             
     C’est à Rabat, la capitale du Maroc, que j’ai vraiment découvert la tradition du thé. Egaré dans la ville, un habitant a très aimablement accepté de me guider. Nous avons fait connaissance et il m’a alors proposé de partager le thé chez lui.
@@ -545,15 +749,13 @@ function chemin_eteindre(n) {
 }
 </style>
 <div class="article_splash_conteneur">
-    <div class="splash"  style="background-image:url('img/kesstey.jpg'); background-size:cover;"></div>
+    <div class="splash"  style="background-image:url('img/convivial1.jpg'); background-size:cover;"></div>
     <div class="article" id="article2" style="background:white;">
-        <div class="article_entete">
-            <div style="display:inline-block;"><h1 style="font-size:1.2em; font-weight:lighter; transform:translateY(-16px);">Jour 26</h1></div>
-            <div style="float:right;">
-                <h2 style="display:inline-block; text-align:right; font-size: 1.5em; line-height: 1.2;">Kess tey</h2>
-                <h2 style="display:inline-block; text-align:right; font-size: 1.5em; line-height: 1.2; font-weight:lighter; margin-left:10px;">Rabat<br>Maroc</h2>
-            </div>
-        </div>
+                                                                <table style="width:100%;"><tr>
+            <td style="padding:30px 0 30px 20px; font-size:1.2em; font-weight:lighter;">Jour 26</td>
+            <td style="padding:0 0 0 0; font-size:1.5em; line-height:1.2; text-align:right; font-weight:bold;">Kess tey</td>
+            <td style="padding:0 0 0 0; font-size:1.5em; line-height:1.2; text-align:left;  font-weight:lighter; margin-left:10px;">Rabat<br>Maroc</td>
+        </tr></table>
         <div class="article_texte" id="article_texte2">
             
     C’est à Rabat, la capitale du Maroc, que j’ai vraiment découvert la tradition du thé. Egaré dans la ville, un habitant a très aimablement accepté de me guider. Nous avons fait connaissance et il m’a alors proposé de partager le thé chez lui.
@@ -658,8 +860,8 @@ function chemin_eteindre(n) {
 <nav class="bebasneue"><table style="width:100%;"><tr>
     <td style="text-align:center;"><a href="mon_voyage.html">MON VOYAGE</a></td>
     <td style="text-align:center;"><a href="contact.html">CONTACT</a></td>
-    <td style="text-align:center;"><a href="mentions_legales.html">MENTIONS L&Eacute;GALES</a></td>
-    <td style="text-align:center;"><a href="qui_sommes_nous.html">QUI SOMMES-NOUS</a></td>
+    <td style="text-align:center;"><a href="javascript:void(0);"><s style="text-decoration:line-through;">MENTIONS L&Eacute;GALES</s></a></td>
+    <td style="text-align:center;"><a href="javascript:void(0);"><s style="text-decoration:line-through;">QUI SOMMES-NOUS</s></a></td>
 </tr></table></nav>
 
 </footer>

@@ -72,6 +72,11 @@
 
 
 
+
+
+
+
+
         <meta charset="utf-8">
 <!-- 
     CE FICHIER A ETE GENERE AUTOMATIQUEMENT VIA M4. 
@@ -291,6 +296,212 @@
 </script>
 
 
+<script>
+	map_style_monvoyage = [
+    {
+        "featureType": "all",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#4b480f"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "gamma": 0.01
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "saturation": -31
+            },
+            {
+                "lightness": -33
+            },
+            {
+                "weight": 2
+            },
+            {
+                "gamma": 0.8
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#f4f0e2"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#424242"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 30
+            },
+            {
+                "saturation": 30
+            },
+            {
+                "color": "#424242"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "saturation": 20
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 20
+            },
+            {
+                "saturation": -20
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#424242"
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 10
+            },
+            {
+                "saturation": -30
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "saturation": 25
+            },
+            {
+                "lightness": 25
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#424242"
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "lightness": "-26"
+            },
+            {
+                "saturation": "100"
+            },
+            {
+                "color": "#494949"
+            }
+        ]
+    }
+];
+</script>
+
+
+
+
 
 
 
@@ -440,11 +651,6 @@ function chemin_eteindre(n) {
     </a></p>
 
         
-    <p><a href="javascript:glisser('article3');">
-        <img src="img/pastille.png" alt="p" class="nav_article_puce">
-    </a></p>
-
-        
     <p><a href="javascript:glisser('gallerie');">
         <img src="img/pastille_ronde.png" alt="p" class="nav_article_puce">
     </a></p>
@@ -480,13 +686,11 @@ function chemin_eteindre(n) {
 <div class="article_splash_conteneur">
     <div class="splash"  style="background-image:url('img/cheikzayed.jpg'); background-size:cover;"></div>
     <div class="article" id="article1" style="background:white;">
-        <div class="article_entete">
-            <div style="display:inline-block;"><h1 style="font-size:1.2em; font-weight:lighter; transform:translateY(-16px);">Jour 1</h1></div>
-            <div style="float:right;">
-                <h2 style="display:inline-block; text-align:right; font-size: 1.5em; line-height: 1.2;">La grand mosquée<br>Cheik Zayed</h2>
-                <h2 style="display:inline-block; text-align:right; font-size: 1.5em; line-height: 1.2; font-weight:lighter; margin-left:10px;">Abu<br>Dhabi</h2>
-            </div>
-        </div>
+                                                                <table style="width:100%;"><tr>
+            <td style="padding:30px 0 30px 20px; font-size:1.2em; font-weight:lighter;">Jour 1</td>
+            <td style="padding:0 0 0 0; font-size:1.5em; line-height:1.2; text-align:right; font-weight:bold;">La grand mosquée<br>Cheik Zayed</td>
+            <td style="padding:0 0 0 0; font-size:1.5em; line-height:1.2; text-align:left;  font-weight:lighter; margin-left:10px;">Abu<br>Dhabi</td>
+        </tr></table>
         <div class="article_texte" id="article_texte1">
             
     Cette visite a profondément marqué mon voyage. Lorsque je me suis retrouvé face à cette immense mosquée, je me suis soudain senti minuscule. L’adhan (appel à la prière) résonnait du haut du minaret. Les nombreux fidèles rejoignaient d’un pas apaisé le bâtiment d’un blanc éclatant. Le parterre de dalle s'étendant entre moi et l'édifice luisait, reflétant le ciel où quelques nuages seulement glissaient sous la force du vent. Je plissais les yeux pour regarder le grand minaret, le soleil des Emirat m'aveuglant. Une sensation de quiétude me gagnait alors que je me joignais à la marche des croyants vers les grandes portes.<br>
@@ -538,15 +742,13 @@ function chemin_eteindre(n) {
 }
 </style>
 <div class="article_splash_conteneur">
-    <div class="splash"  style="background-image:url('img/cheikzayed.jpg'); background-size:cover;"></div>
+    <div class="splash"  style="background-image:url('img/spirituel1.jpg'); background-size:cover;"></div>
     <div class="article" id="article2" style="background:white;">
-        <div class="article_entete">
-            <div style="display:inline-block;"><h1 style="font-size:1.2em; font-weight:lighter; transform:translateY(-16px);">Jour 9</h1></div>
-            <div style="float:right;">
-                <h2 style="display:inline-block; text-align:right; font-size: 1.5em; line-height: 1.2;">La grand mosquée<br>Cheik Zayed</h2>
-                <h2 style="display:inline-block; text-align:right; font-size: 1.5em; line-height: 1.2; font-weight:lighter; margin-left:10px;">Abu<br>Dhabi</h2>
-            </div>
-        </div>
+                                                                <table style="width:100%;"><tr>
+            <td style="padding:30px 0 30px 20px; font-size:1.2em; font-weight:lighter;">Jour 9</td>
+            <td style="padding:0 0 0 0; font-size:1.5em; line-height:1.2; text-align:right; font-weight:bold;">La grand mosquée<br>Cheik Zayed</td>
+            <td style="padding:0 0 0 0; font-size:1.5em; line-height:1.2; text-align:left;  font-weight:lighter; margin-left:10px;">Abu<br>Dhabi</td>
+        </tr></table>
         <div class="article_texte" id="article_texte2">
             
     Cette visite a profondément marqué mon voyage. Lorsque je me suis retrouvé face à cette immense mosquée, je me suis soudain senti minuscule. L’adhan (appel à la prière) résonnait du haut du minaret. Les nombreux fidèles rejoignaient d’un pas apaisé le bâtiment d’un blanc éclatant. Le parterre de dalle s'étendant entre moi et l'édifice luisait, reflétant le ciel où quelques nuages seulement glissaient sous la force du vent. Je plissais les yeux pour regarder le grand minaret, le soleil des Emirat m'aveuglant. Une sensation de quiétude me gagnait alors que je me joignais à la marche des croyants vers les grandes portes.<br>
@@ -655,8 +857,8 @@ function chemin_eteindre(n) {
 <nav class="bebasneue"><table style="width:100%;"><tr>
     <td style="text-align:center;"><a href="mon_voyage.html">MON VOYAGE</a></td>
     <td style="text-align:center;"><a href="contact.html">CONTACT</a></td>
-    <td style="text-align:center;"><a href="mentions_legales.html">MENTIONS L&Eacute;GALES</a></td>
-    <td style="text-align:center;"><a href="qui_sommes_nous.html">QUI SOMMES-NOUS</a></td>
+    <td style="text-align:center;"><a href="javascript:void(0);"><s style="text-decoration:line-through;">MENTIONS L&Eacute;GALES</s></a></td>
+    <td style="text-align:center;"><a href="javascript:void(0);"><s style="text-decoration:line-through;">QUI SOMMES-NOUS</s></a></td>
 </tr></table></nav>
 
 </footer>
