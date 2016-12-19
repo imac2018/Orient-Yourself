@@ -87,10 +87,32 @@ xx_nav_categories_chemin_script()
 )
 
 m4_define(<:xx_nav_categories_entete:>, 
+<script style="display:none;">
+function mobile_afficher_navcat() {$("#mobile_navcat").fadeIn();}
+function mobile_cacher_navcat()   {$("#mobile_navcat").fadeOut();}
+</script>
+<div class="mobile_seulement" id="mobile_navcat" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9003; background:black;">
+    <div style="position:fixed; top:0; right:0; z-index:9005;"><a href="javascript:mobile_cacher_navcat();"><span style="font-size:32px; font-weight:bold; margin:20px;">X</span></a></div>
+    <div style="position:fixed; top:20px; left:20px;  z-index:9004;"><span class="bebasneue" style="font-size:20px;">POUR UN VOYAGE...</span></div>
+    <table style="width:100%; height:100%;">
+        <tr><td style="text-align:center; vertical-align:middle;">xx_nav_categories_chemin</td></tr>
+    </table>
+</div>
 <nav class="nav_categories">
-    <a href="index.html"><img class="nav_categorie_logo" alt="logo" src="img/logo_blanc.png"></a>
     m4_dnl <div>POUR UN VOYAGE...</div>
-    xx_nav_categories_chemin
+    <span class="bureau_seulement">
+        <a href="index.html"><img class="nav_categorie_logo" alt="logo" src="img/logo_blanc.png"></a>
+        xx_nav_categories_chemin
+    </span>
+    <table class="mobile_seulement" style="width:100%;"><tr>
+        <td style="text-align:left;"><a href="index.html"><img class="nav_categorie_logo" alt="logo" src="img/logo_blanc.png" style="margin-bottom:0;"></a></td>
+        <td style="text-align:right;">
+            <a href="javascript:mobile_afficher_navcat();">
+                <img src="img/hamburger.png" alt="burger" style="height:40px; margin-top:5px; margin-right:20px;">
+            </a>
+        </td>
+    </tr></table>
+    </span>
     m4_dnl <a href="javascript:alert('La recherche, c\'est plus tard !');"><img alt="chercher" src="img/loupe.png" style="width:16px;"></a>
 </nav>
 )

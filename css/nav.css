@@ -13,6 +13,7 @@
     margin: 4px 0;
 }
 
+@media screen and (min-width:769px) {
 .nav_categories {
     z-index:1;
     background: linear-gradient(rgba(37,37,79,.55), rgba(0,0,0,0));
@@ -20,9 +21,22 @@
     top:0; left:0;
     width:64%;
 }
+}
+@media screen and (max-width:768px) {
+.nav_categories {
+    z-index:1;
+    background: black;
+    position:fixed;
+    top:0; left:0;
+    width:100%;
+}
+}
+
+/*
 .nav_categories > * {
     display:inline;
 }
+*/
 
 .nav_categorie {
     margin: 10px;

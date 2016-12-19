@@ -13,13 +13,18 @@
 
     xx_header_au_sacados_sans_monvoyage
 
-    <table style="width:100%; height:100%;"><tr>
+    <table class="bureau_seulement" style="width:100%; height:100%;"><tr>
         <td style="width:50%; height:100%;"><div id="lacarte" style="width:100%; height:80%;"></div></td>
-        <td style="padding:30px;">
+        <td style="padding:30px; line-height:1.2;">
             <h1 class="bebasneue">MON VOYAGE</h1><br>
             xx_histoire_monvoyage
         </td>
     </tr></table>
+    <table class="mobile_seulement" style="width:100%; height:100%;">
+        <tr><td style="padding-top:30px; height:50%;">xx_histoire_monvoyage</td></tr>
+        <tr><td style="width:100%; height:50%;"><div id="lacarte2" style="width:100%; height:80%;"></div></td></tr>
+    </table>
+
 
     xx_carte_monvoyage(lacarte, 2, xx_histoire_gustatif_les_mezzes_lat, xx_histoire_gustatif_les_mezzes_lng)
     xx_carte_marqueur(lacarte, xx_histoire_panoramique_burj_khalifa_lat, xx_histoire_panoramique_burj_khalifa_lng)
@@ -27,6 +32,14 @@
     xx_carte_marqueur(lacarte, xx_histoire_artisanal_poterie_meybod_lat, xx_histoire_artisanal_poterie_meybod_lng)
     xx_carte_marqueur(lacarte, xx_histoire_gustatif_les_mezzes_lat, xx_histoire_gustatif_les_mezzes_lng)
     xx_carte_marqueur(lacarte, xx_histoire_convivial_kess_tey_lat, xx_histoire_convivial_kess_tey_lng)
+
+    xx_carte_monvoyage(lacarte2, 2, xx_histoire_gustatif_les_mezzes_lat, xx_histoire_gustatif_les_mezzes_lng)
+    xx_carte_marqueur(lacarte2, xx_histoire_panoramique_burj_khalifa_lat, xx_histoire_panoramique_burj_khalifa_lng)
+    xx_carte_marqueur(lacarte2, xx_histoire_spirituelle_cheikh_zayed_lat, xx_histoire_spirituelle_cheikh_zayed_lng)
+    xx_carte_marqueur(lacarte2, xx_histoire_artisanal_poterie_meybod_lat, xx_histoire_artisanal_poterie_meybod_lng)
+    xx_carte_marqueur(lacarte2, xx_histoire_gustatif_les_mezzes_lat, xx_histoire_gustatif_les_mezzes_lng)
+    xx_carte_marqueur(lacarte2, xx_histoire_convivial_kess_tey_lat, xx_histoire_convivial_kess_tey_lng)
+
 
     <footer class="footer_collant">
         xx_nav_footer_sans_monvoyage()

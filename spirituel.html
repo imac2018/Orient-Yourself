@@ -519,8 +519,133 @@
 </head>
 <body>
 
-        <nav class="nav_categories">
-    <a href="index.html"><img class="nav_categorie_logo" alt="logo" src="img/logo_blanc.png"></a>
+        <script style="display:none;">
+function mobile_afficher_navcat() {$("#mobile_navcat").fadeIn();}
+function mobile_cacher_navcat()   {$("#mobile_navcat").fadeOut();}
+</script>
+<div class="mobile_seulement" id="mobile_navcat" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9003; background:black;">
+    <div style="position:fixed; top:0; right:0; z-index:9005;"><a href="javascript:mobile_cacher_navcat();"><span style="font-size:32px; font-weight:bold; margin:20px;">X</span></a></div>
+    <div style="position:fixed; top:20px; left:20px;  z-index:9004;"><span class="bebasneue" style="font-size:20px;">POUR UN VOYAGE...</span></div>
+    <table style="width:100%; height:100%;">
+        <tr><td style="text-align:center; vertical-align:middle;"><script style="display:none;">
+chemin_transition_ms = 200;
+function chemin_eclairer(n) {
+    for(var i=1 ; i<=n ; ++i) {
+        $(".noeud"+i).stop().fadeTo(chemin_transition_ms, 1);
+        $(".chemin_avant"+i).stop().fadeTo(chemin_transition_ms, 1);
+    }
+    for(var i=1 ; i<=n-1 ; ++i)
+        $(".chemin"+i).stop().fadeTo(chemin_transition_ms, 1);
+}
+function chemin_eteindre(n) {
+    for(var i=1 ; i<=n ; ++i) {
+        $(".noeud"+i).stop().fadeTo(chemin_transition_ms, .5);
+        $(".chemin_avant"+i).stop().fadeTo(chemin_transition_ms, .5);
+    }
+    for(var i=1 ; i<=n-1 ; ++i)
+        $(".chemin"+i).stop().fadeTo(chemin_transition_ms, .5);
+}
+</script>
+
+<div style="width:64%; text-align:center; display:inline-block; margin-top:42px;">
+  <div style="display:inline-block; width:4.97335701598579040852%; margin:0 -2px;">
+    <img alt="panoramique.html" src="img/menu_simple/n1_n.png" style="display:block; width:100%; margin:0;">
+    <a href="panoramique.html" class="bebasneue">
+        <div style="position: relative; width: 0; height: 0;">
+            <div style="position: absolute; left: -22px; top: -30px;" onmouseover="chemin_eclairer(1);" onmouseleave="chemin_eteindre(1);">
+                <span class="op8">PANORAMIQUE</span>
+            </div>
+        </div>
+    </a>
+    <a href="panoramique.html" style="text-decoration:none;">
+        <img alt="panoramique.html" src="img/menu_simple/n1_c.png" style="display:block; width:100%; margin:0; opacity:.5;" onmouseover="chemin_eclairer(1);" onmouseleave="chemin_eteindre(1);" class="noeud1">
+    </a>
+    <img alt="panoramique.html" src="img/menu_simple/n1_s.png" style="display:block; width:100%; margin:0; opacity:.5;" class="chemin_avant1">
+</div>
+
+  <div style="display:inline-block; width:18.25932504440497335701%; margin:0 -1px;">
+    <img alt="panoramique.html" src="img/menu_simple/c1.png" style="display:inline-block; width:100%; opacity:.5;" class="chemin1"><br>
+</div>
+
+  <div style="display:inline-block; width:5.11545293072824156305%; margin:0 -2px;">
+    <img alt="spirituel.html" src="img/menu_simple/n2_n.png" style="display:block; width:100%; margin:0;">
+    <a href="spirituel.html" class="bebasneue">
+        <div style="position: relative; width: 0; height: 0;">
+            <div style="position: absolute; left: -12px; top: -30px;" onmouseover="chemin_eclairer(2);" onmouseleave="chemin_eteindre(2);">
+                <span class="op8">SPIRITUEL</span>
+            </div>
+        </div>
+    </a>
+    <a href="spirituel.html" style="text-decoration:none;">
+        <img alt="spirituel.html" src="img/menu_simple/n2_c.png" style="display:block; width:100%; margin:0; opacity:.5;" onmouseover="chemin_eclairer(2);" onmouseleave="chemin_eteindre(2);" class="noeud2">
+    </a>
+    <img alt="spirituel.html" src="img/menu_simple/n2_s.png" style="display:block; width:100%; margin:0; opacity:.5;" class="chemin_avant2">
+</div>
+
+  <div style="display:inline-block; width:15.73712255772646536412%; margin:0 -1px;">
+    <img alt="spirituel.html" src="img/menu_simple/c2.png" style="display:inline-block; width:100%; opacity:.5;" class="chemin2"><br>
+</div>
+
+  <div style="display:inline-block; width:5.00888099467140319715%; margin:0 -2px;">
+    <img alt="artisanal.html" src="img/menu_simple/n3_n.png" style="display:block; width:100%; margin:0;">
+    <a href="artisanal.html" class="bebasneue">
+        <div style="position: relative; width: 0; height: 0;">
+            <div style="position: absolute; left: -18px; top: -22px;" onmouseover="chemin_eclairer(3);" onmouseleave="chemin_eteindre(3);">
+                <span class="op8">ARTISANAL</span>
+            </div>
+        </div>
+    </a>
+    <a href="artisanal.html" style="text-decoration:none;">
+        <img alt="artisanal.html" src="img/menu_simple/n3_c.png" style="display:block; width:100%; margin:0; opacity:.5;" onmouseover="chemin_eclairer(3);" onmouseleave="chemin_eteindre(3);" class="noeud3">
+    </a>
+    <img alt="artisanal.html" src="img/menu_simple/n3_s.png" style="display:block; width:100%; margin:0; opacity:.5;" class="chemin_avant3">
+</div>
+
+  <div style="display:inline-block; width:17.93960923623445825932%; margin:0 -1px;">
+    <img alt="artisanal.html" src="img/menu_simple/c3.png" style="display:inline-block; width:100%; opacity:.5;" class="chemin3"><br>
+</div>
+
+  <div style="display:inline-block; width:5.15097690941385435168%; margin:0 -2px;">
+    <img alt="gustatif.html" src="img/menu_simple/n4_n.png" style="display:block; width:100%; margin:0;">
+    <a href="gustatif.html" class="bebasneue">
+        <div style="position: relative; width: 0; height: 0;">
+            <div style="position: absolute; left: -16px; top: -30px;" onmouseover="chemin_eclairer(4);" onmouseleave="chemin_eteindre(4);">
+                <span class="op8">GUSTATIF</span>
+            </div>
+        </div>
+    </a>
+    <a href="gustatif.html" style="text-decoration:none;">
+        <img alt="gustatif.html" src="img/menu_simple/n4_c.png" style="display:block; width:100%; margin:0; opacity:.5;" onmouseover="chemin_eclairer(4);" onmouseleave="chemin_eteindre(4);" class="noeud4">
+    </a>
+    <img alt="gustatif.html" src="img/menu_simple/n4_s.png" style="display:block; width:100%; margin:0; opacity:.5;" class="chemin_avant4">
+</div>
+
+  <div style="display:inline-block; width:22.77087033747779751332%; margin:0 -1px;">
+    <img alt="gustatif.html" src="img/menu_simple/c4.png" style="display:inline-block; width:100%; opacity:.5;" class="chemin4"><br>
+</div>
+
+  <div style="display:inline-block; width:5.04440497335701598579%; margin:0 -2px;">
+    <img alt="convivial.html" src="img/menu_simple/n5_n.png" style="display:block; width:100%; margin:0;">
+    <a href="convivial.html" class="bebasneue">
+        <div style="position: relative; width: 0; height: 0;">
+            <div style="position: absolute; left: -18px; top: -26px;" onmouseover="chemin_eclairer(5);" onmouseleave="chemin_eteindre(5);">
+                <span class="op8">CONVIVIAL</span>
+            </div>
+        </div>
+    </a>
+    <a href="convivial.html" style="text-decoration:none;">
+        <img alt="convivial.html" src="img/menu_simple/n5_c.png" style="display:block; width:100%; margin:0; opacity:.5;" onmouseover="chemin_eclairer(5);" onmouseleave="chemin_eteindre(5);" class="noeud5">
+    </a>
+    <img alt="convivial.html" src="img/menu_simple/n5_s.png" style="display:block; width:100%; margin:0; opacity:.5;" class="chemin_avant5">
+</div>
+
+</div>
+</td></tr>
+    </table>
+</div>
+<nav class="nav_categories">
+        <span class="bureau_seulement">
+        <a href="index.html"><img class="nav_categorie_logo" alt="logo" src="img/logo_blanc.png"></a>
         <script style="display:none;">
 chemin_transition_ms = 200;
 function chemin_eclairer(n) {
@@ -635,6 +760,16 @@ function chemin_eteindre(n) {
 
 </div>
 
+    </span>
+    <table class="mobile_seulement" style="width:100%;"><tr>
+        <td style="text-align:left;"><a href="index.html"><img class="nav_categorie_logo" alt="logo" src="img/logo_blanc.png" style="margin-bottom:0;"></a></td>
+        <td style="text-align:right;">
+            <a href="javascript:mobile_afficher_navcat();">
+                <img src="img/hamburger.png" alt="burger" style="height:40px; margin-top:5px; margin-right:20px;">
+            </a>
+        </td>
+    </tr></table>
+    </span>
     </nav>
 
     
@@ -682,11 +817,64 @@ function chemin_eteindre(n) {
 #deplie_seulement1 {
     display:none;
 }
+
+@media screen and (min-width:769px) {
+    .article_responsive { display:none;}
+    .article_splash_conteneur { display:block;}
+}
+@media screen and (max-width:768px) {
+    .article_responsive { display:block;}
+    .article_splash_conteneur { display:none;}
+}
+
 </style>
+<script>
+function   lire_article_mobile1() {$(".article_mobile1").fadeIn();}
+function delire_article_mobile1() {$(".article_mobile1").fadeOut();}
+</script>
+<div class="mobile_seulement article_mobile1" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9001; background:white; opacity:.4;"></div>
+<div class="mobile_seulement article_mobile1" style="display:none; position:fixed; top:20%; left:0; width:100%; height:80%; z-index:9002; background:white;">
+    <table style="width:100%; height:100%;">
+        <tr><td style="text-align:right;"><a href="javascript:delire_article_mobile1();"><span style="color:black; font-weight:bold; font-size:20px;">X</span></a></td></tr>
+        <tr><td style="text-align:center;">
+            <div style="display:inline-block; padding:0 0 0 0; font-size:1.5em; line-height:1.2; color:black; font-weight:bold;   ">La grand mosquée<br>Cheik Zayed</div>
+            <div style="display:inline-block; padding:0 0 0 0; font-size:1.5em; line-height:1.2; color:black; font-weight:lighter;">Abu<br>Dhabi</div>
+        </td></tr>
+        <tr><td style="text-align:left; color:black; height:80%; padding:25px;"><div style=" height:100%; overflow:auto; color:black;">
+    Cette visite a profondément marqué mon voyage. Lorsque je me suis retrouvé face à cette immense mosquée, je me suis soudain senti minuscule. L’adhan (appel à la prière) résonnait du haut du minaret. Les nombreux fidèles rejoignaient d’un pas apaisé le bâtiment d’un blanc éclatant. Le parterre de dalle s'étendant entre moi et l'édifice luisait, reflétant le ciel où quelques nuages seulement glissaient sous la force du vent. Je plissais les yeux pour regarder le grand minaret, le soleil des Emirat m'aveuglant. Une sensation de quiétude me gagnait alors que je me joignais à la marche des croyants vers les grandes portes.<br>
+    A l’intérieur, je découvrais un espace immense. Le sol était couvert d’un splendide tapis iranien. En levant la tête, je pouvais admirer un plafond orné et sculpté. Un lustre énorme surplombait nos têtes. <br>
+    J’avoue, je suis resté bouche-bée pendant un moment. Mais peut-être que quelques chiffres pourront vous aider à comprendre ce que j’ai pu ressentir : <br>
+    La mosquée peut accueillir jusqu’à 40 000 fidèles! Elle comprend 80 dômes et environ 1000 colonnes. Les lustres sont plaqués d’or et celui de la salle de prière principale fait 10 mètres de diamètre pour 15 mètres de haut. Waou, c’est juste énorme. Et ce fameux tapis sur lesquels je faisais timidement quelques pas n’est autre que le plus grand tapis tissé à la main au monde. <br>
+    Des bassins entourent la mosquée et scintillent au soleil comme le blanc et l’or qui couvre l’édifice. La nuit, ce dernier est illuminé par un système d’éclairage unique reflétant les phases de la lune.<br>
+    Tout est à couper le souffle.<br>
+    On reconnait bien là les Emiratis qui raffolent des records du monde en architecture. Je l’avais bien compris dès <a href="panoramique.html">ma visite de Burj Khalifat</a>     Pendant un moment, le temps s’est arrêté. Cette visite assure un moment magique, bercé de spiritualité.<br>
+</div></td></tr>
+    </table>
+</div>
+<div class="article_responsive" style="width:100%; height:100%; background:#3b3b3b;">
+    <div style="height:50%; background-image:url('img/cheikzayed.jpg'); background-size:cover;"></div>
+    <div style="position:relative; top:-10%; left:0; width:70%; height:60%; background:white;">
+    <a href="javascript:lire_article_mobile1();">
+        <table style="width:100%; height:100%;">
+            <tr>
+                <td style="height:50%; text-align:center;">
+                    <div style="display:inline-block; padding:0 0 0 0; font-size:1.5em; line-height:1.2; color:black; font-weight:bold;   ">La grand mosquée<br>Cheik Zayed</div>
+                    <div style="display:inline-block; padding:0 0 0 0; font-size:1.5em; line-height:1.2; color:black; font-weight:lighter;">Abu<br>Dhabi</div>
+                </td>
+                            </tr><tr>
+                <td style="width:100%; height:50%; text-align:right; vertical-align:bottom; padding:5%;">
+                    <span style="display:inline-block; color:black; font-size:20px; transform:translate(-10px, -20px);">Lire l'article</span>
+                    <img src="img/icon_article1.png" alt="..." style="height:50px;">
+                </td>
+            </tr>
+        </table>
+    </a>
+    </div>
+</div>
 <div class="article_splash_conteneur">
     <div class="splash"  style="background-image:url('img/cheikzayed.jpg'); background-size:cover;"></div>
     <div class="article" id="article1" style="background:white;">
-                                                                <table style="width:100%;"><tr>
+        <table style="width:100%;"><tr>
             <td style="padding:30px 0 30px 20px; font-size:1.2em; font-weight:lighter;">Jour 1</td>
             <td style="padding:0 0 0 0; font-size:1.5em; line-height:1.2; text-align:right; font-weight:bold;">La grand mosquée<br>Cheik Zayed</td>
             <td style="padding:0 0 0 0; font-size:1.5em; line-height:1.2; text-align:left;  font-weight:lighter; margin-left:10px;">Abu<br>Dhabi</td>
@@ -702,14 +890,13 @@ function chemin_eteindre(n) {
     On reconnait bien là les Emiratis qui raffolent des records du monde en architecture. Je l’avais bien compris dès <a href="panoramique.html">ma visite de Burj Khalifat</a>     Pendant un moment, le temps s’est arrêté. Cette visite assure un moment magique, bercé de spiritualité.<br>
 
         </div>
-                        
 
         <table style="width:100%;"><tr>
             <td style="text-align:center;"><img src="img/macro1.png" style="width:100%; transform:translateX(50%);"></td>
             <td style="text-align:center;">
                 <a href="javascript:void(0);">
                     <img src="img/carre.png"  style="width:100%; position:relative; z-index:2;">
-                                    </a>
+                </a>
             </td>
             <td style="text-align:center;"><img src="img/macro2.png" style="width:100%; transform:translateX(-50%);"></td>
         </tr></table>
@@ -740,11 +927,64 @@ function chemin_eteindre(n) {
 #deplie_seulement2 {
     display:none;
 }
+
+@media screen and (min-width:769px) {
+    .article_responsive { display:none;}
+    .article_splash_conteneur { display:block;}
+}
+@media screen and (max-width:768px) {
+    .article_responsive { display:block;}
+    .article_splash_conteneur { display:none;}
+}
+
 </style>
+<script>
+function   lire_article_mobile2() {$(".article_mobile2").fadeIn();}
+function delire_article_mobile2() {$(".article_mobile2").fadeOut();}
+</script>
+<div class="mobile_seulement article_mobile2" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9001; background:white; opacity:.4;"></div>
+<div class="mobile_seulement article_mobile2" style="display:none; position:fixed; top:20%; left:0; width:100%; height:80%; z-index:9002; background:white;">
+    <table style="width:100%; height:100%;">
+        <tr><td style="text-align:right;"><a href="javascript:delire_article_mobile2();"><span style="color:black; font-weight:bold; font-size:20px;">X</span></a></td></tr>
+        <tr><td style="text-align:center;">
+            <div style="display:inline-block; padding:0 0 0 0; font-size:1.5em; line-height:1.2; color:black; font-weight:bold;   ">La grand mosquée<br>Cheik Zayed</div>
+            <div style="display:inline-block; padding:0 0 0 0; font-size:1.5em; line-height:1.2; color:black; font-weight:lighter;">Abu<br>Dhabi</div>
+        </td></tr>
+        <tr><td style="text-align:left; color:black; height:80%; padding:25px;"><div style=" height:100%; overflow:auto; color:black;">
+    Cette visite a profondément marqué mon voyage. Lorsque je me suis retrouvé face à cette immense mosquée, je me suis soudain senti minuscule. L’adhan (appel à la prière) résonnait du haut du minaret. Les nombreux fidèles rejoignaient d’un pas apaisé le bâtiment d’un blanc éclatant. Le parterre de dalle s'étendant entre moi et l'édifice luisait, reflétant le ciel où quelques nuages seulement glissaient sous la force du vent. Je plissais les yeux pour regarder le grand minaret, le soleil des Emirat m'aveuglant. Une sensation de quiétude me gagnait alors que je me joignais à la marche des croyants vers les grandes portes.<br>
+    A l’intérieur, je découvrais un espace immense. Le sol était couvert d’un splendide tapis iranien. En levant la tête, je pouvais admirer un plafond orné et sculpté. Un lustre énorme surplombait nos têtes. <br>
+    J’avoue, je suis resté bouche-bée pendant un moment. Mais peut-être que quelques chiffres pourront vous aider à comprendre ce que j’ai pu ressentir : <br>
+    La mosquée peut accueillir jusqu’à 40 000 fidèles! Elle comprend 80 dômes et environ 1000 colonnes. Les lustres sont plaqués d’or et celui de la salle de prière principale fait 10 mètres de diamètre pour 15 mètres de haut. Waou, c’est juste énorme. Et ce fameux tapis sur lesquels je faisais timidement quelques pas n’est autre que le plus grand tapis tissé à la main au monde. <br>
+    Des bassins entourent la mosquée et scintillent au soleil comme le blanc et l’or qui couvre l’édifice. La nuit, ce dernier est illuminé par un système d’éclairage unique reflétant les phases de la lune.<br>
+    Tout est à couper le souffle.<br>
+    On reconnait bien là les Emiratis qui raffolent des records du monde en architecture. Je l’avais bien compris dès <a href="panoramique.html">ma visite de Burj Khalifat</a>     Pendant un moment, le temps s’est arrêté. Cette visite assure un moment magique, bercé de spiritualité.<br>
+</div></td></tr>
+    </table>
+</div>
+<div class="article_responsive" style="width:100%; height:100%; background:#3b3b3b;">
+    <div style="height:50%; background-image:url('img/spirituel1.jpg'); background-size:cover;"></div>
+    <div style="position:relative; top:-10%; left:0; width:70%; height:60%; background:white;">
+    <a href="javascript:lire_article_mobile2();">
+        <table style="width:100%; height:100%;">
+            <tr>
+                <td style="height:50%; text-align:center;">
+                    <div style="display:inline-block; padding:0 0 0 0; font-size:1.5em; line-height:1.2; color:black; font-weight:bold;   ">La grand mosquée<br>Cheik Zayed</div>
+                    <div style="display:inline-block; padding:0 0 0 0; font-size:1.5em; line-height:1.2; color:black; font-weight:lighter;">Abu<br>Dhabi</div>
+                </td>
+                            </tr><tr>
+                <td style="width:100%; height:50%; text-align:right; vertical-align:bottom; padding:5%;">
+                    <span style="display:inline-block; color:black; font-size:20px; transform:translate(-10px, -20px);">Lire l'article</span>
+                    <img src="img/icon_article1.png" alt="..." style="height:50px;">
+                </td>
+            </tr>
+        </table>
+    </a>
+    </div>
+</div>
 <div class="article_splash_conteneur">
     <div class="splash"  style="background-image:url('img/spirituel1.jpg'); background-size:cover;"></div>
     <div class="article" id="article2" style="background:white;">
-                                                                <table style="width:100%;"><tr>
+        <table style="width:100%;"><tr>
             <td style="padding:30px 0 30px 20px; font-size:1.2em; font-weight:lighter;">Jour 9</td>
             <td style="padding:0 0 0 0; font-size:1.5em; line-height:1.2; text-align:right; font-weight:bold;">La grand mosquée<br>Cheik Zayed</td>
             <td style="padding:0 0 0 0; font-size:1.5em; line-height:1.2; text-align:left;  font-weight:lighter; margin-left:10px;">Abu<br>Dhabi</td>
@@ -760,14 +1000,13 @@ function chemin_eteindre(n) {
     On reconnait bien là les Emiratis qui raffolent des records du monde en architecture. Je l’avais bien compris dès <a href="panoramique.html">ma visite de Burj Khalifat</a>     Pendant un moment, le temps s’est arrêté. Cette visite assure un moment magique, bercé de spiritualité.<br>
 
         </div>
-                        
 
         <table style="width:100%;"><tr>
             <td style="text-align:center;"><img src="img/macro1.png" style="width:100%; transform:translateX(50%);"></td>
             <td style="text-align:center;">
                 <a href="javascript:void(0);">
                     <img src="img/carre.png"  style="width:100%; position:relative; z-index:2;">
-                                    </a>
+                </a>
             </td>
             <td style="text-align:center;"><img src="img/macro2.png" style="width:100%; transform:translateX(-50%);"></td>
         </tr></table>

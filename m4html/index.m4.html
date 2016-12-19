@@ -13,10 +13,23 @@
 
     xx_header_au_sacados
 
+    <style>
+@media screen and (min-width:769px) {
+    #sorienter { width:65%; }
+    #sorienter_conteneur { width:75%; }
+    #navfooter_accueil { width:50%;}
+}
+@media screen and (max-width:768px) {
+    #sorienter { width:100%; }
+    #sorienter_conteneur { width:80%; }
+    #alhada_desc { display:none;}
+    #navfooter_accueil { width:100%;}
+}
+    </style>
     <div class="poster" id="poster0" style="background-image:url('img/hal_hada.jpg');">
         <div class="poster_fond">
-            <div class="poster_logo_conteneur" style="width:75%;">
-                <i style="width:65%;">
+            <div id="sorienter_conteneur" class="poster_logo_conteneur">
+                <i id="sorienter">
                 <br>
                 <br>
                 <p><b>S'orienter</b>, vb : Partir à la découverte de l'orient.</p>
@@ -31,10 +44,10 @@
         </div>
     </div>
     <footer class="footer_collant">
-        <table style="width:100%;"><tr><td style="width:50%;">
+        <table style="width:100%;"><tr><td id="navfooter_accueil">
             xx_nav_footer_sans_monvoyage()
         </td><td style="text-align:right;" class="bebasneue">
-            <span style="margin-right:10px;">HAL-HADA - ARABIE SAOUDITE</span>
+            <span id="alhada_desc" style="margin-right:10px;">HAL-HADA - ARABIE SAOUDITE</span>
         </td></tr></table>
     </footer>
 </body>

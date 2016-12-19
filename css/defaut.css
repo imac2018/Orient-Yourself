@@ -24,6 +24,13 @@ a:focus, a:focus *, a:hover, a:hover * {
     font-family: "Bebas Neue";
     font-size:17px;
 }
+
+@media screen and (max-width:768px) {
+.bebasneue, .bebasneue * {
+    font-size:15px;
+}
+}
+
 .cairo, .cairo * {
     font-family: "Cairo";
 }
@@ -32,4 +39,12 @@ a:focus, a:focus *, a:hover, a:hover * {
 }
 .op8:focus, .op8:focus *, .op8:hover, .op8:hover * {
     opacity : 1;
+}
+
+
+@media screen and (min-width:769px) { 
+    .mobile_seulement { display:none;}
+}
+@media screen and (max-width:768px) {
+    .bureau_seulement { display:none;}
 }

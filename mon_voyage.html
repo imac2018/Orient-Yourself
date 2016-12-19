@@ -528,9 +528,9 @@
 </div>
 
 
-    <table style="width:100%; height:100%;"><tr>
+    <table class="bureau_seulement" style="width:100%; height:100%;"><tr>
         <td style="width:50%; height:100%;"><div id="lacarte" style="width:100%; height:80%;"></div></td>
-        <td style="padding:30px;">
+        <td style="padding:30px; line-height:1.2;">
             <h1 class="bebasneue">MON VOYAGE</h1><br>
             
 Bonjour !<br>
@@ -541,6 +541,17 @@ J’ai indiqué sur la carte tous les lieux importants que j’ai visités et do
 
         </td>
     </tr></table>
+    <table class="mobile_seulement" style="width:100%; height:100%;">
+        <tr><td style="padding-top:30px; height:50%;">
+Bonjour !<br>
+<br>
+Je m’appelle André, et je suis le routard fictif de ce blog ! C’est sur celui-ci que je rédige des articles sur mon voyage en Orient, comme l’on écrirait des souvenirs sur son carnet de route. <br>
+<br>
+J’ai indiqué sur la carte tous les lieux importants que j’ai visités et dont je parle dans les articles. Mon voyage s’étend sur tout le Moyen-Orient, partant des magnifiques paysages Iraniens pour aller jusqu’aux petites douceurs du Maroc. <br>
+</td></tr>
+        <tr><td style="width:100%; height:50%;"><div id="lacarte2" style="width:100%; height:80%;"></div></td></tr>
+    </table>
+
 
     <script>
     $(function(){
@@ -613,6 +624,80 @@ J’ai indiqué sur la carte tous les lieux importants que j’ai visités et do
         });
     });
     </script>
+
+
+    <script>
+    $(function(){
+        map_lacarte2 = new google.maps.Map(document.getElementById('lacarte2'), {
+            center: new google.maps.LatLng(33.854721, 35.86228499999993),
+            zoom: 2,
+            panControl: false,
+            zoomControl: false,
+            mapTypeControl: false,
+            streetViewControl: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            scrollwheel: false,
+            styles: map_style_monvoyage,
+            backgroundColor: '#494949'
+        });
+    });
+    </script>
+
+    <script>
+    $(function(){
+        marker_lacarte2 = new google.maps.Marker({
+            position: new google.maps.LatLng(25.1968645, 55.274349400000006),
+            map: map_lacarte2,
+            visible: true,
+            icon: "img/map_marker.png"
+        });
+    });
+    </script>
+
+    <script>
+    $(function(){
+        marker_lacarte2 = new google.maps.Marker({
+            position: new google.maps.LatLng(24.4125412, 54.475140099999976),
+            map: map_lacarte2,
+            visible: true,
+            icon: "img/map_marker.png"
+        });
+    });
+    </script>
+
+    <script>
+    $(function(){
+        marker_lacarte2 = new google.maps.Marker({
+            position: new google.maps.LatLng(32.2487226, 54.00793410000006),
+            map: map_lacarte2,
+            visible: true,
+            icon: "img/map_marker.png"
+        });
+    });
+    </script>
+
+    <script>
+    $(function(){
+        marker_lacarte2 = new google.maps.Marker({
+            position: new google.maps.LatLng(33.854721, 35.86228499999993),
+            map: map_lacarte2,
+            visible: true,
+            icon: "img/map_marker.png"
+        });
+    });
+    </script>
+
+    <script>
+    $(function(){
+        marker_lacarte2 = new google.maps.Marker({
+            position: new google.maps.LatLng(33.9715904, -6.849812899999961),
+            map: map_lacarte2,
+            visible: true,
+            icon: "img/map_marker.png"
+        });
+    });
+    </script>
+
 
 
     <footer class="footer_collant">
