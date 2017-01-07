@@ -108,7 +108,7 @@ function mobile_cacher_navcat()   {$("#mobile_navcat").fadeOut();}
         <td style="text-align:left;"><a href="index.html"><img class="nav_categorie_logo" alt="logo" src="img/logo_blanc.png" style="margin-bottom:0;"></a></td>
         <td style="text-align:right;">
             <a href="javascript:mobile_afficher_navcat();">
-                <img src="img/hamburger.png" alt="burger" style="height:40px; margin-top:5px; margin-right:20px;">
+                <img src="img/hamburger.png" alt="burger" style="height:26px; margin-top:5px; margin-right:20px;">
             </a>
         </td>
     </tr></table>

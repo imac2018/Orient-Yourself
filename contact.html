@@ -562,6 +562,18 @@
     margin-top:50px;
     transform:translateY(-25px);
 }
+.whiteplaceholder::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: white;
+}
+.whiteplaceholder::-moz-placeholder { /* Firefox 19+ */
+      color: white;
+}
+.whiteplaceholder:-ms-input-placeholder { /* IE 10+ */
+      color: white;
+}
+.whiteplaceholder:-moz-placeholder { /* Firefox 18- */
+      color: white;
+}
 </style>
 
     <div class="poster" id="poster0" style="background-image:url('http://yoanlecoq.com/dl/oy/img_contact.jpg'); background-color:white; background-position: 0 -100px; background-repeat:no-repeat;">
@@ -574,7 +586,7 @@
                     </td></tr>
                     <tr><td class="w100 centered" style="">
                         <form action="">
-                            <input    class="w100 border0 blackbg" name="email" type="text" placeholder="Email"><br>
+                            <input    class="w100 border0 blackbg whiteplaceholder" name="email" type="text" placeholder="Email"><br>
                             <textarea class="w100 border0 blackbg msg" name="msg" rows="4" cols="40">Votre message</textarea><br>
                             <input    class="w100 border0 whitebg envoyer" type="submit" value="Envoyer">
                         </form>

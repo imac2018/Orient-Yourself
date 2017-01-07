@@ -9,8 +9,9 @@
 }
 
 .nav_article_puce {
-    width:  16px;
+    width:  12px;
     margin: 4px 0;
+    margin-right: 6px;
 }
 
 @media screen and (min-width:769px) {
